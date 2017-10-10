@@ -1,0 +1,18 @@
+{
+  "name": "bytefiddler",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/janek26/ByteFiddler.git",
+  "author": "Janek Rahrt <janek.rahrt@me.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "^4.0.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  }
+}
