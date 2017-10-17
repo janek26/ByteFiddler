@@ -4,6 +4,11 @@ Projectmanagment:
 
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/janek26/ByteFiddler.png?columns=all)](https://waffle.io/janek26/ByteFiddler?utm_source=badge)
 
+## Skizze der Hauptseite
+Ist nur als Orientierung gedacht, 
+so kann das ganze angeortnet sein und/oder Aussehen.
+![Skizze](https://github.com/janek26/ByteFiddler/blob/Skizzen/skizzen/hauptseiteskizze.jpeg)
+
 ## How to start
 
 ### Prerequirements
