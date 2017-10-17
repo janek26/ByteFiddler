@@ -19,3 +19,6 @@ After that you should get a message that the server is now online.
 
 ## Tech Stack
 React, Redux
+
+## Git Cheatsheet
+![Git Cheatsheet](https://www.git-tower.com/blog/content/posts/54-git-cheat-sheet/git-cheat-sheet-large01.png)
