@@ -25,5 +25,8 @@ After that you should get a message that the server is now online.
 ## Tech Stack
 React, Redux
 
+## Anforderungen
+- Es kann davon ausgegangen werden das der Bildschirm des Users eine Mindestbreite von 900px hat
+
 ## Git Cheatsheet
 ![Git Cheatsheet](https://www.git-tower.com/blog/content/posts/54-git-cheat-sheet/git-cheat-sheet-large01.png)
