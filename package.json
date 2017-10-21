@@ -9,7 +9,7 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export -o docs"
+    "export": "NODE_ENV=export next export -o docs"
   },
   "dependencies": {
     "next": "^4.0.1",
