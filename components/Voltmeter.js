@@ -1,44 +1,40 @@
-// Voltage Levels
-// 0%	= -120deg
-// 5% = -108deg
-// 10% = -96deg
-// 20% = -72deg
-// ...
-// 45% = -12deg
-// 50% = 0deg
-// 100% = 120deg
-const calcDeg = (value, minDeg = -120, maxDeg = 120) => {
-  return minDeg + (value * ((maxDeg - minDeg) / 100))
-}
+const calcDeg = (value, minDeg = -120, maxDeg = 120) => 
+  minDeg + (value * ((maxDeg - minDeg) / 100))
+const renderNumber = (count, min, max) => ((max-min)/10)*count
+const calcProcent = (value, min, max) => value / (max-min)
+
 export default ({
   value = 0,
+  animationDuration = 200,
+  min = 0,
+  max = 100,
 }) => (
     <div>
       <div id="voltmeter">
         <div className="ii">
-          <div><b><span className="num_1">0</span></b></div>
+          <div><b><span className="num_1">{renderNumber(0, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_2">10</span></b></div>
+          <div><b><span className="num_2">{renderNumber(1, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_3">20</span></b></div>
+          <div><b><span className="num_3">{renderNumber(2, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_4">30</span></b></div>
+          <div><b><span className="num_4">{renderNumber(3, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_5">40</span></b></div>
+          <div><b><span className="num_5">{renderNumber(4, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_6">50</span></b></div>
+          <div><b><span className="num_6">{renderNumber(5, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_7">60</span></b></div>
+          <div><b><span className="num_7">{renderNumber(6, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_8">70</span></b></div>
+          <div><b><span className="num_8">{renderNumber(7, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_9">80</span></b></div>
+          <div><b><span className="num_9">{renderNumber(8, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_10">90</span></b></div>
+          <div><b><span className="num_10">{renderNumber(9, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_11">100</span></b></div>
+          <div><b><span className="num_11">{renderNumber(10, min, max)}</span></b></div>
         </div>
-        <div className="voltage">{value.toFixed(2)}</div>
+        <div className="voltage">{calcProcent(value, min, max).toFixed(2)}</div>
         <div className="line" style={{transform: `rotate(${calcDeg(value)}deg)`}}></div>
         <div className="voltage"></div>
         <div className="pin"><div className="inner"></div></div>
@@ -188,7 +184,7 @@ export default ({
         }
 
         .line {
-          transition: all 200ms ease-in-out;
+          transition: all ${animationDuration} ease-in-out;
           background: #F14134;
           background-image: linear-gradient(to bottom, #F14134, #343536);
           height: 0;

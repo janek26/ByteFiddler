@@ -23,7 +23,8 @@ export default class IndexPage extends Component {
         />
         <h1>{this.state.text}</h1>
         <BitDisplay 
-          digits={[0,1,2,3,4,5,6,7,8,9]} 
+          digits={[3,3,5,6,2,6]} 
+          fixedNumberOfBits={8}
         />
         <br/>
         <Voltmeter value={parseInt(this.state.text)} />
