@@ -34,7 +34,7 @@ export default ({
           <div><b></b></div>
           <div><b><span className="num_11">{renderNumber(10, min, max)}</span></b></div>
         </div>
-        <div className="voltage">{calcProcent(value, min, max).toFixed(2)}</div>
+        <div className="voltage">{(calcProcent(value, min, max)*100).toFixed(2)}%</div>
         <div className="line" style={{transform: `rotate(${calcDeg(value)}deg)`}}></div>
         <div className="voltage"></div>
         <div className="pin"><div className="inner"></div></div>
@@ -175,7 +175,7 @@ export default ({
 
         .voltage {
           color:#FFF;
-          left:43%;
+          left:39%;
           top:70%;
           font-size:60px;
           margin: -25px 0 0 -25px;
