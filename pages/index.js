@@ -23,7 +23,7 @@ export default class IndexPage extends Component {
         />
         <h1>{this.state.text}</h1>
         <BitDisplay 
-          digits={[3,3,5,6,2,6]} 
+          digits={[3,3,5,6,5,3,5]} 
           fixedNumberOfBits={8}
         />
         <br/>

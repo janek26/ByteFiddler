@@ -12,27 +12,27 @@ export default ({
     <div>
       <div id="voltmeter">
         <div className="ii">
-          <div><b><span className="num_1">{renderNumber(0, min, max)}</span></b></div>
+          <div><b><span className="num num_1">{renderNumber(0, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_2">{renderNumber(1, min, max)}</span></b></div>
+          <div><b><span className="num num_2">{renderNumber(1, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_3">{renderNumber(2, min, max)}</span></b></div>
+          <div><b><span className="num num_3">{renderNumber(2, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_4">{renderNumber(3, min, max)}</span></b></div>
+          <div><b><span className="num num_4">{renderNumber(3, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_5">{renderNumber(4, min, max)}</span></b></div>
+          <div><b><span className="num num_5">{renderNumber(4, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_6">{renderNumber(5, min, max)}</span></b></div>
+          <div><b><span className="num num_6">{renderNumber(5, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_7">{renderNumber(6, min, max)}</span></b></div>
+          <div><b><span className="num num_7">{renderNumber(6, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_8">{renderNumber(7, min, max)}</span></b></div>
+          <div><b><span className="num num_8">{renderNumber(7, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_9">{renderNumber(8, min, max)}</span></b></div>
+          <div><b><span className="num num_9">{renderNumber(8, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_10">{renderNumber(9, min, max)}</span></b></div>
+          <div><b><span className="num num_10">{renderNumber(9, min, max)}</span></b></div>
           <div><b></b></div>
-          <div><b><span className="num_11">{renderNumber(10, min, max)}</span></b></div>
+          <div><b><span className="num num_11">{renderNumber(10, min, max)}</span></b></div>
         </div>
         <div className="voltage">{(calcProcent(value, min, max)*100).toFixed(2)}%</div>
         <div className="line" style={{transform: `rotate(${calcDeg(value)}deg)`}}></div>
@@ -148,7 +148,7 @@ export default ({
         }
 
 
-        [class^="num_"] {
+        .num {
           color:#FFF;
           display: block;
           position: absolute;
