@@ -184,7 +184,7 @@ export default ({
         }
 
         .line {
-          transition: all ${animationDuration} ease-in-out;
+          transition: all ${animationDuration}ms ease-in-out;
           background: #F14134;
           background-image: linear-gradient(to bottom, #F14134, #343536);
           height: 0;
