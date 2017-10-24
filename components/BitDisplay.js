@@ -12,7 +12,7 @@ export default ({
     <div className="display" >
       {
         (fixedNumberOfBits ? (new Array(fixedNumberOfBits)).fill(0) : digits).map((x,i) => 
-          <Digit {...rest} digit={digits[i]} />
+          <Digit {...rest} digit={digits[i]} key={i} />
         )
       }
     </div>
