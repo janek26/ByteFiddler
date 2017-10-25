@@ -1,32 +1,20 @@
-const captionStyle = (marginBottom, width, fontSize, textAlign ) => {'0px', '317px', '1em', 'center'}
-
-
 export default ({
+  captionStyle = (marginBottom, width, fontSize, textAlign ) => {'0px', '317px', '1em', 'center'},
+  buttonStyle = (width, height, margin) => {'20px', '15px', '5px'},
   ...rest
 }) => (
 
-<div>
-  <style jsx>{`
-      button.set {
-        width: 20px;
-        height: 15px;
-        margin: 5px 5px;
-      }
-    `}</style>
-
-
+  <div>
     <div id="group1">
-
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
     </div>
-
 
     <div class="operands">
       <button id="or">or</button>
@@ -40,16 +28,15 @@ export default ({
       <button id="div">div</button>
     </div>
 
-
     <div id="group2">
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
-      <button class="set"></button>
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
+      <button />
     </div>
 
     <div id="result">
