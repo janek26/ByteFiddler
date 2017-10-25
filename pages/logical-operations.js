@@ -5,9 +5,7 @@ export default class LogicalOperationsPage extends Component {
 
   render () {
     return (
-	<div>
-		<LogicalOperations />
-	</div>
+      <div><LogicalOperations /></div>
     )
   }
 }
