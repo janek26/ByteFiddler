@@ -5,17 +5,6 @@ export default ({
 }) => (
 
   <div>
-    <div id="group1">
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
-    </div>
-
     <div class="operands">
       <button id="or">or</button>
       <button id="and">and</button>
@@ -27,18 +16,6 @@ export default ({
       <button id="mul">mul</button>
       <button id="div">div</button>
     </div>
-
-    <div id="group2">
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
-      <button />
-    </div>
-
     <div id="result">
     </div>
   </div>
