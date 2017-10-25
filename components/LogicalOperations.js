@@ -7,25 +7,6 @@ export default ({
 
 <div>
   <style jsx>{`
-      #group1, #group2, #result {
-        width: 315px;
-        height: 60px;
-        border: 1px solid black;
-
-      }
-
-      #group1 {
-        margin: 0 0 10px 0;
-      }
-
-      #group2 {
-        margin: 0;
-      }
-
-      #result {
-        height: 40px;
-      }
-
       button.set {
         width: 20px;
         height: 15px;
@@ -36,38 +17,14 @@ export default ({
 
     <div id="group1">
 
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
     </div>
 
 
@@ -85,39 +42,14 @@ export default ({
 
 
     <div id="group2">
-
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
-
-      <span class="numGroup">
-        <button class="set"></button>
-      </span>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
+      <button class="set"></button>
     </div>
 
     <div id="result">
