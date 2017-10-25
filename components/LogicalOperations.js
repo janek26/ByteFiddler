@@ -1,4 +1,3 @@
-import BitDisplay from '../components/BitDisplay'
 
 export default ({
   ...rest
@@ -41,19 +40,13 @@ export default ({
         height: 15px;
         margin: 5px 5px;
       }
-
     `}</style>
-
 
 
     <h3 class="caption">Operand 1</h3>
     <div id="group1">
 
-    <BitDisplay
-      digits={[7, 6, 5, 4, 3, 2, 1, 0]}
-      fixedNumberOfBits={8}
-      id="firstBitDisplay"
-    />
+
       <span class="numGroup">
         <button class="set"></button>
       </span>
@@ -104,11 +97,6 @@ export default ({
     <h3 class="caption">Operand 2</h3>
     <div id="group2">
 
-      <BitDisplay
-        digits={[7, 6, 5, 4, 3, 2, 1, 0]}
-        fixedNumberOfBits={8}
-        id="secondBitDisplay"
-      />
 
       <span class="numGroup">
         <button class="set"></button>
@@ -146,11 +134,6 @@ export default ({
 
     <h3 class="caption">Result</h3>
     <div id="result">
-      <BitDisplay
-        digits={[7, 6, 5, 4, 3, 2, 1, 0]}
-        fixedNumberOfBits={8}
-        id="resultBitDisplay"
-      />
     </div>
   </div>
 )
