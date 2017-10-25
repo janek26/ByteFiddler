@@ -43,7 +43,6 @@ export default ({
     `}</style>
 
 
-    <h3 class="caption">Operand 1</h3>
     <div id="group1">
 
 
@@ -94,7 +93,6 @@ export default ({
     </div>
 
 
-    <h3 class="caption">Operand 2</h3>
     <div id="group2">
 
 
@@ -131,8 +129,6 @@ export default ({
       </span>
     </div>
 
-
-    <h3 class="caption">Result</h3>
     <div id="result">
     </div>
   </div>
