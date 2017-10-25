@@ -1,21 +1,12 @@
+const captionStyle = (marginBottom, width, fontSize, textAlign ) => {'0px', '317px', '1em', 'center'}
+
 
 export default ({
   ...rest
 }) => (
+
 <div>
   <style jsx>{`
-      h3.caption {
-        margin-bottom: 0px;
-        width: 317px;
-        font-size: 1em;
-        text-align: center;
-      }
-
-      #site {
-        width: 900px;
-        height: 700px;
-      }
-
       #group1, #group2, #result {
         width: 315px;
         height: 60px;
