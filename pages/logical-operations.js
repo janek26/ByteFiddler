@@ -3,27 +3,30 @@ import BitDisplay from '../components/BitDisplay'
 import LogicalOperations from '../components/LogicalOperations'
 
 
-function BitButton(props) {
-  return <button className={props.position}>{props.position}</button>;
+/**
+ * function ButtonGroup()
+ * Creates a group of Buttons for switching different bit-positions
+ *
+ * props.numbers:  Array with numbers for identification
+ * props.id:        Group-ID
+ */
+function ButtonGroup(props) {
+  // Mapping Numbers to Buttons
+  const buttonItems = props.numbers.map((number) =>
+    <button id={props.id+number} className={number}>{number}</button>
+  );
+
+  return (
+    <div id={props.id}>
+      {buttonItems}
+    </div>
+  )
 }
 
-function ButtonGroup(props) {
-  return (
-    <div id={props.name}>
-      <BitButton name={props.name} position="7" />
-      <BitButton name={props.name} position="6" />
-      <BitButton name={props.name} position="5" />
-      <BitButton name={props.name} position="4" />
-      <BitButton name={props.name} position="3" />
-      <BitButton name={props.name} position="2" />
-      <BitButton name={props.name} position="1" />
-      <BitButton name={props.name} position="0" />
-    </div>
-  );
-}
 
 export default class LogicalOperationsPage extends Component {
   render () {
+
     return (
       <div>
       <LogicalOperations />
@@ -34,7 +37,8 @@ export default class LogicalOperationsPage extends Component {
         id="firstBitDisplay"
       />
       <ButtonGroup
-        name="firstGroup"
+        numbers={[7, 6, 5, 4, 3, 2, 1, 0]}
+        id="firstBitButtonGroup"
       />
 
       <h3 style={LogicalOperations.captionStyle}>Operand 2</h3>
@@ -44,7 +48,8 @@ export default class LogicalOperationsPage extends Component {
         id="secondBitDisplay"
       />
       <ButtonGroup
-        name="secondGroup"
+        numbers={[7, 6, 5, 4, 3, 2, 1, 0]}
+        id="secondBitButtonGroup"
       />
 
       <h3 style={LogicalOperations.captionStyle}>Result</h3>
