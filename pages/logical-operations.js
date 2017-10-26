@@ -2,11 +2,12 @@ import { Component } from 'react'
 import BitDisplay from '../components/BitDisplay'
 import LogicalOperations from '../components/LogicalOperations'
 
+
 /**
  * function CreateCaption()
  * Creates captions for the Bitgroups
  *
- * props.topic:      Topic
+ * props.topic:      Caption for the Bitgroup
  */
 function CreateCaption(props) {
   var topicElement = React.createElement(
@@ -26,17 +27,24 @@ function CreateCaption(props) {
 }
 
 
+function handleClick(number, e) {
+  console.log(number);
+}
+
 /**
  * function ButtonGroup()
  * Creates a group of Buttons for switching different bit-positions
  *
  * props.numbers:  Array with numbers for identification
- * props.id:        Group-ID
+ * props.id:       Group-ID
  */
 function ButtonGroup(props) {
-  // Mapping Numbers to Buttons
+  /** Mapping Numbers to Buttons */
   const buttonItems = props.numbers.map((number) =>
-    <button id={props.id+number} className={number}>{number}</button>
+    <button
+      id={props.id+number}
+      className={number}change={number}
+      onClick={(e) => handleClick(number, e)}>Bit {number}</button>
   );
 
   return (
@@ -49,6 +57,7 @@ function ButtonGroup(props) {
 export default class LogicalOperationsPage extends Component {
 
   state = {
+    /** States of single bits */
     firstBitgroup:  [0, 0, 0, 0, 0, 0, 0, 0],
     secondBitgroup: [0, 0, 0, 0, 0, 0, 0, 0],
     result:         [0, 0, 0, 0, 0, 0, 0, 0]
