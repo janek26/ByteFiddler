@@ -2,7 +2,6 @@ import { Component } from 'react'
 import BitDisplay from '../components/BitDisplay'
 import LogicalOperations from '../components/LogicalOperations'
 
-
 /**
  * function CreateCaption()
  * Creates captions for the Bitgroups
@@ -47,8 +46,14 @@ function ButtonGroup(props) {
   )
 }
 
-
 export default class LogicalOperationsPage extends Component {
+
+  state = {
+    firstBitgroup:  [0, 0, 0, 0, 0, 0, 0, 0],
+    secondBitgroup: [0, 0, 0, 0, 0, 0, 0, 0],
+    result:         [0, 0, 0, 0, 0, 0, 0, 0]
+  }
+
   render () {
     return (
       <div>
@@ -56,7 +61,7 @@ export default class LogicalOperationsPage extends Component {
 
       <CreateCaption topic="Operand 1" />
       <BitDisplay
-        digits={[0, 0, 0, 0, 0, 0, 0, 0]}
+        digits={this.state.firstBitgroup}
         fixedNumberOfBits={8}
         id="firstBitDisplay" />
       <ButtonGroup
@@ -65,7 +70,7 @@ export default class LogicalOperationsPage extends Component {
 
       <CreateCaption topic="Operand 2" />
       <BitDisplay
-        digits={[0, 0, 0, 0, 0, 0, 0, 0]}
+        digits={this.state.secondBitgroup}
         fixedNumberOfBits={8}
         id="secondBitDisplay" />
       <ButtonGroup
@@ -74,7 +79,7 @@ export default class LogicalOperationsPage extends Component {
 
       <CreateCaption topic="Result" />
       <BitDisplay
-        digits={[0, 0, 0, 0, 0, 0, 0, 0]}
+        digits={this.state.result}
         fixedNumberOfBits={8}
         id="resultBitDisplay" />
       </div>
