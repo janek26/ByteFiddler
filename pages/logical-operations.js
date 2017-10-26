@@ -4,6 +4,18 @@ import LogicalOperations from '../components/LogicalOperations'
 
 
 /**
+ * function CreateCaption()
+ * Creates captions for the Bitgroups
+ *
+ * props.name:      Topic
+ */
+function CreateCaption(props) {
+  // const captionStyle = (marginBottom, width, fontSize, textAlign ) => {'0px', '317px', '1em', 'center'}
+  return <h3>{props.name}</h3>
+}
+
+
+/**
  * function ButtonGroup()
  * Creates a group of Buttons for switching different bit-positions
  *
@@ -26,39 +38,33 @@ function ButtonGroup(props) {
 
 export default class LogicalOperationsPage extends Component {
   render () {
-
     return (
       <div>
       <LogicalOperations />
-      <h3 style={LogicalOperations.captionStyle}>Operand 1</h3>
+
+      <CreateCaption name="Operand 1" />
       <BitDisplay
         digits={[0, 0, 0, 0, 0, 0, 0, 0]}
         fixedNumberOfBits={8}
-        id="firstBitDisplay"
-      />
+        id="firstBitDisplay" />
       <ButtonGroup
         numbers={[7, 6, 5, 4, 3, 2, 1, 0]}
-        id="firstBitButtonGroup"
-      />
+        id="firstBitButtonGroup" />
 
-      <h3 style={LogicalOperations.captionStyle}>Operand 2</h3>
+      <CreateCaption name="Operand 2" />
       <BitDisplay
         digits={[0, 0, 0, 0, 0, 0, 0, 0]}
         fixedNumberOfBits={8}
-        id="secondBitDisplay"
-      />
+        id="secondBitDisplay" />
       <ButtonGroup
         numbers={[7, 6, 5, 4, 3, 2, 1, 0]}
-        id="secondBitButtonGroup"
-      />
+        id="secondBitButtonGroup" />
 
-      <h3 style={LogicalOperations.captionStyle}>Result</h3>
+      <CreateCaption name="Result" />
       <BitDisplay
         digits={[0, 0, 0, 0, 0, 0, 0, 0]}
         fixedNumberOfBits={8}
-        id="resultBitDisplay"
-      />
-
+        id="resultBitDisplay" />
       </div>
     )
   }

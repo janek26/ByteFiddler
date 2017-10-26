@@ -1,5 +1,5 @@
 export default ({
-  captionStyle = (marginBottom, width, fontSize, textAlign ) => {'0px', '317px', '1em', 'center'},
+  
   buttonStyle = (width, height, margin) => {'20px', '15px', '5px'},
   ...rest
 }) => (
