@@ -7,11 +7,23 @@ import LogicalOperations from '../components/LogicalOperations'
  * function CreateCaption()
  * Creates captions for the Bitgroups
  *
- * props.name:      Topic
+ * props.topic:      Topic
  */
 function CreateCaption(props) {
-  // const captionStyle = (marginBottom, width, fontSize, textAlign ) => {'0px', '317px', '1em', 'center'}
-  return <h3>{props.name}</h3>
+  var topicElement = React.createElement(
+    'h3',
+    {
+      style: {
+        marginBottom: '0px',
+        width: '480px',
+        fontSize: '1em',
+        textAlign: 'center'
+      }
+    },
+    props.topic
+  )
+
+  return topicElement
 }
 
 
@@ -42,7 +54,7 @@ export default class LogicalOperationsPage extends Component {
       <div>
       <LogicalOperations />
 
-      <CreateCaption name="Operand 1" />
+      <CreateCaption topic="Operand 1" />
       <BitDisplay
         digits={[0, 0, 0, 0, 0, 0, 0, 0]}
         fixedNumberOfBits={8}
@@ -51,7 +63,7 @@ export default class LogicalOperationsPage extends Component {
         numbers={[7, 6, 5, 4, 3, 2, 1, 0]}
         id="firstBitButtonGroup" />
 
-      <CreateCaption name="Operand 2" />
+      <CreateCaption topic="Operand 2" />
       <BitDisplay
         digits={[0, 0, 0, 0, 0, 0, 0, 0]}
         fixedNumberOfBits={8}
@@ -60,7 +72,7 @@ export default class LogicalOperationsPage extends Component {
         numbers={[7, 6, 5, 4, 3, 2, 1, 0]}
         id="secondBitButtonGroup" />
 
-      <CreateCaption name="Result" />
+      <CreateCaption topic="Result" />
       <BitDisplay
         digits={[0, 0, 0, 0, 0, 0, 0, 0]}
         fixedNumberOfBits={8}
