@@ -8,19 +8,17 @@ import BitOperationsGroup from '../logical-operations/BitOperationsGroup';
 let CreateCaption = props => (<h3>{props.topic}</h3>);
 
 export default class LogicalOperations extends React.Component {
-  state = {
-    /** States of single bits */
-    firstBitgroup:  [1, 0, 1, 0, 1, 0, 1, 0],
-    secondBitgroup: [0, 1, 0, 1, 0, 1, 0, 1],
-    result:         [0, 0, 0, 0, 0, 0, 0, 0]
-  };
-
   render() {
+    /** States of single bits */
+    let firstBitgroup   = [1, 0, 1, 0, 1, 0, 1, 0];
+    let secondBitgroup  = [0, 1, 0, 1, 0, 1, 0, 1];
+    let result          = [0, 0, 0, 0, 0, 0, 0, 0];
+
     return(
       <div>
         <CreateCaption topic="Operand 1" />
         <BitDisplay
-          digits={this.state.firstBitgroup}
+          digits={firstBitgroup}
           fixedNumberOfBits={8}
           id="firstBitDisplay" />
         <BitButtonGroup
@@ -30,7 +28,7 @@ export default class LogicalOperations extends React.Component {
         <BitOperationsGroup />
         <CreateCaption topic="Operand 2" />
         <BitDisplay
-          digits={this.state.secondBitgroup}
+          digits={secondBitgroup}
           fixedNumberOfBits={8}
           id="secondBitDisplay" />
         <BitButtonGroup
@@ -39,7 +37,7 @@ export default class LogicalOperations extends React.Component {
 
         <CreateCaption topic="Result" />
         <BitDisplay
-          digits={this.state.result}
+          digits={result}
           fixedNumberOfBits={8}
           id="resultBitDisplay" />
       </div>
