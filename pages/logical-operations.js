@@ -1,16 +1,17 @@
-import { Component } from 'react'
-import BitDisplay from '../components/BitDisplay'
-import LogicalOperations from '../components/LogicalOperations'
+"use strict";
+
+import {Component}        from 'react';
+import BitDisplay         from '../components/BitDisplay';
+import LogicalOperations  from '../components/LogicalOperations';
 
 
 /**
- * function CreateCaption()
+ * CreateCaption()
  * Creates captions for the Bitgroups
  *
  * props.topic:      Caption for the Bitgroup
  */
-function CreateCaption(props) {
-  var topicElement = React.createElement(
+let CreateCaption = props => React.createElement(
     'h3',
     {
       style: {
@@ -21,47 +22,50 @@ function CreateCaption(props) {
       }
     },
     props.topic
-  )
+  );
 
-  return topicElement
-}
-
-
-function handleClick(number, e) {
-  console.log(number);
-}
 
 /**
- * function ButtonGroup()
+ * ButtonGroup()
  * Creates a group of Buttons for switching different bit-positions
  *
  * props.numbers:  Array with numbers for identification
  * props.id:       Group-ID
  */
-function ButtonGroup(props) {
+ let ButtonGroup = props => {
+  let groupId = props.id;
+
   /** Mapping Numbers to Buttons */
-  const buttonItems = props.numbers.map((number) =>
+  let buttonItems = props.numbers.map((number) =>
     <button
-      id={props.id+number}
-      className={number}change={number}
-      onClick={(e) => handleClick(number, e)}>Bit {number}</button>
+      key={groupId+number}
+      className={'b'+number}
+      onClick={(e) => handleClick(groupId, number, e)}>Bit {number}</button>
   );
 
   return (
     <div id={props.id}>
       {buttonItems}
     </div>
-  )
-}
+  );
+};
+
+
+let handleClick = (groupId, number, e) => {
+  if (groupId == 'firstBitgroup')
+      console.log(groupId, number);
+  else if (groupId == 'secondBitgroup')
+      console.log(groupId, number);
+};
+
 
 export default class LogicalOperationsPage extends Component {
-
   state = {
     /** States of single bits */
-    firstBitgroup:  [0, 0, 0, 0, 0, 0, 0, 0],
-    secondBitgroup: [0, 0, 0, 0, 0, 0, 0, 0],
+    firstBitgroup:  [1, 0, 1, 0, 1, 0, 1, 0],
+    secondBitgroup: [0, 1, 0, 1, 0, 1, 0, 1],
     result:         [0, 0, 0, 0, 0, 0, 0, 0]
-  }
+  };
 
   render () {
     return (
@@ -75,7 +79,7 @@ export default class LogicalOperationsPage extends Component {
         id="firstBitDisplay" />
       <ButtonGroup
         numbers={[7, 6, 5, 4, 3, 2, 1, 0]}
-        id="firstBitButtonGroup" />
+        id="firstBitgroup" />
 
       <CreateCaption topic="Operand 2" />
       <BitDisplay
@@ -84,7 +88,7 @@ export default class LogicalOperationsPage extends Component {
         id="secondBitDisplay" />
       <ButtonGroup
         numbers={[7, 6, 5, 4, 3, 2, 1, 0]}
-        id="secondBitButtonGroup" />
+        id="secondBitgroup" />
 
       <CreateCaption topic="Result" />
       <BitDisplay
@@ -92,6 +96,6 @@ export default class LogicalOperationsPage extends Component {
         fixedNumberOfBits={8}
         id="resultBitDisplay" />
       </div>
-    )
+    );
   }
 }

@@ -1,11 +1,11 @@
 export default ({
-  
+
   buttonStyle = (width, height, margin) => {'20px', '15px', '5px'},
   ...rest
 }) => (
 
   <div>
-    <div class="operands">
+    <div className="operands">
       <button id="or">or</button>
       <button id="and">and</button>
       <button id="xor">xor</button>
