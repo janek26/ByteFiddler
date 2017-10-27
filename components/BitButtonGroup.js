@@ -1,7 +1,5 @@
 "use strict";
 
-import {Component}        from 'react';
-
 let handleClick = (groupId, number, e) => {
   if (groupId == 'firstBitgroup')
       console.log(groupId, number);
@@ -16,7 +14,7 @@ let handleClick = (groupId, number, e) => {
  * props.numbers:  Array with numbers for identification
  * props.id:       Group-ID
  */
-export default class BitButtonGroup extends Component {
+export default class BitButtonGroup extends React.Component {
   render() {
     let groupId = this.props.id;
 
