@@ -1,0 +1,7 @@
+exclude_paths:
+- ".git/**/*"
+- ".next/**/*"
+- "docs/**/*"
+- "html-mockup/**/*"
+- "node_modules/**/*"
+- "skizzen/**/*"
