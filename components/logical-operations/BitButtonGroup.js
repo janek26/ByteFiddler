@@ -1,11 +1,5 @@
 "use strict";
 
-let handleClick = (groupId, number, e) => {
-  if (groupId == 'firstBitgroup')
-      console.log(groupId, number);
-  else if (groupId == 'secondBitgroup')
-      console.log(groupId, number);
-};
 
 /**
  * BitButtonGroup
@@ -15,6 +9,13 @@ let handleClick = (groupId, number, e) => {
  * props.id:       Group-ID
  */
 export default class BitButtonGroup extends React.Component {
+  handleBitClick (groupId, number, e) {
+    if (groupId == 'firstBitgroup')
+        console.log(groupId, number);
+    else if (groupId == 'secondBitgroup')
+        console.log(groupId, number);
+  }
+
   render() {
     let groupId = this.props.id;
 
@@ -23,7 +24,7 @@ export default class BitButtonGroup extends React.Component {
       <button
       key={groupId+number}
       className={'b'+number}
-      onClick={(e) => handleClick(groupId, number, e)}>Bit {number}</button>
+      onClick={(e) => this.handleBitClick(groupId, number, e)}>Bit {number}</button>
     );
 
     return (
