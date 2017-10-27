@@ -1,8 +1,8 @@
 "use strict";
 
-import BitDisplay         from '../components/BitDisplay';
-import BitButtonGroup     from '../components/BitButtonGroup';
-import BitOperationsGroup from '../components/BitOperationsGroup';
+import BitDisplay         from '../BitDisplay';
+import BitButtonGroup     from '../logical-operations/BitButtonGroup';
+import BitOperationsGroup from '../logical-operations/BitOperationsGroup';
 
 
 let CreateCaption = props => (<h3>{props.topic}</h3>);
