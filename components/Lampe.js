@@ -1,10 +1,14 @@
+const rgba_value = (red, green, blue, transparency) => `rgba(${red},${green},${blue},${transparency})`
 export default ({
-  rgba_value,
+  red,
+  green,
+  blue,
+  transparency,
   ...rest
 }) => (
   <div>
   <div id="ledrahmen">
-  <div id="led">
+  <div id="led" style={{backgroundColor: rgba_value(red, green, blue, transparency)}}>
   </div>
   </div>
   <style jsx>{`
@@ -20,8 +24,7 @@ export default ({
     }
 
     #led {
-      background-color: rgba(${rgba_value}); /* rgb werte ohne transperenz, hierim kommentar mit transperenz rgba(230,140,140,1.0); */
-      transition: all 1s ease;
+    transition: all 1s ease;
       position: relative;
       width: 150px;
       height: 150px;

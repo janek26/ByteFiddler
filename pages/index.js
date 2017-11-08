@@ -22,14 +22,18 @@ export default class IndexPage extends Component {
           value={this.state.text}
           onChange={this.handleInputChange.bind(this)}
         />
-        <h1>{this.state.text}</h1>
+        <h1>{(this.state.text)}</h1>
         <BitDisplay
           digits={[3,3,5,6,5,3,5]}
           fixedNumberOfBits={8}
         />
         <br/>
         <Lampe
-          rgba_value={this.state.text} />
+        red= '255'
+        green='0'
+        blue='255'
+        transparency='1'
+           />
       </div>
     )
   }
