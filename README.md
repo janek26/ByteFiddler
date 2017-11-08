@@ -12,7 +12,7 @@ Projectmanagment:
 ## Skizze der Hauptseite
 Ist nur als Orientierung gedacht, 
 so kann das ganze angeortnet sein und/oder Aussehen.
-![Skizze](https://github.com/janek26/ByteFiddler/blob/Skizzen/skizzen/hauptseiteskizze.jpeg)
+![Skizze](https://raw.githubusercontent.com/janek26/ByteFiddler/master/skizzen/hauptseiteskizze.jpeg)
 
 ## How to start
 
