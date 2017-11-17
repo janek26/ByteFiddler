@@ -1,55 +1,43 @@
-export const andBits = text => ({
-  type: 'OP.AND',
-  payload: text,
-})
 
-export const orBits = text => ({
-  type: 'OP.OR',
-  payload: text,
-})
+export function andBits(bits) {
+  let result = '00000000';
+  console.log("andBits");
+  return { type: 'OP.AND', payload: result }
+}
+export function orBits(bits) {
+  let result = '00000001';
+  console.log("orBits");
+  return { type: 'OP.OR', payload: result }
+}
+export function xorBits(bits) {
+  let result = '00000010';
+  console.log("xorBits");
+  return { type: 'OP.XOR', payload: result }
+}
+export function xnorBits(bits) {
+  let result = '00000100';
+  console.log("xnorBits");
+  return { type: 'OP.XNOR', payload: result }
+}
+export function addBits(bits) {
+  let result = '00001000';
+  console.log("addBits");
+  return { type: 'OP.ADD', payload: result }
+}
+export function subBits(bits) {
+  let result = '00010000';
+  console.log("subBits");
+  return { type: 'OP.SUB', payload: result }
+}
 
-export const xorBits = text => ({
-  type: 'OP.XOR',
-  payload: text,
-})
+export function mulBits(bits) {
+  let result = '00100000';
+  console.log("mulBits");
+  return { type: 'OP_MUL', payload: result }
+}
 
-
-export const xnorBits = text => ({
-  type: 'OP.XNOR',
-  payload: text,
-})
-
-
-export const addBits = text => ({
-  type: 'OP.ADD',
-  payload: text,
-})
-
-
-export const subBits = text => ({
-  type: 'OP.SUB',
-  payload: text,
-})
-
-
-export const mulBits = text => ({
-  type: 'OP.MUL',
-  payload: text,
-})
-
-
-export const divBits = text => ({
-  type: 'OP.DIV',
-  payload: text,
-})
-
-
-export const createTodo = text => ({
-  type: 'TODOS.CREATE',
-  payload: text,
-})
-
-export const removeTodo = text => ({
-  type: 'TODOS.REMOVE',
-  payload: text,
-})
+export function divBits(bits) {
+  let result = '01000000';
+  console.log("divBits");
+  return { type: 'OP.DIV', payload: result }
+}
