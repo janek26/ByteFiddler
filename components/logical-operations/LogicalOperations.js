@@ -9,25 +9,6 @@ let firstBitgroup   = [1, 0, 1, 0, 1, 0, 1, 0];
 let secondBitgroup  = [0, 1, 0, 1, 0, 1, 0, 1];
 let result          = [0, 0, 0, 0, 0, 0, 0, 0];
 
-class SingleBitGroup extends React.Component {
-  render() {
-    let name = this.props.id;
-
-    return(
-      <div>
-        <CreateCaption topic="Operand 1" />
-        <BitDisplay
-          digits={firstBitgroup}
-          fixedNumberOfBits={8}
-          id="{name}" />
-        <BitButtonGroup
-          numbers={[7, 6, 5, 4, 3, 2, 1, 0]}
-          id="firstBitgroup" />
-      </div>
-    )
-  }
-
-}
 
 let CreateCaption = props => (<h3>{props.topic}</h3>);
 
