@@ -1,25 +1,6 @@
 "use strict";
 
 
-class SingleBitGroup extends React.Component {
-  render() {
-    let name = this.props.id;
-
-    return(
-      <div>
-        <CreateCaption topic="Operand 1" />
-        <BitDisplay
-          digits={firstBitgroup}
-          fixedNumberOfBits={8}
-          id="{name}" />
-        <BitButtonGroup
-          numbers={[7, 6, 5, 4, 3, 2, 1, 0]}
-          id="firstBitgroup" />
-      </div>
-    )
-  }
-}
-
 /**
  * BitButtonGroup
  * Creates a group of Buttons for switching different bit-positions
