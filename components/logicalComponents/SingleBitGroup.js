@@ -19,7 +19,6 @@ export default class SingleBitGroup extends React.Component {
           fixedNumberOfBits={8}
           id="{name}" />
         <BitButtonGroup
-          numbers={[7, 6, 5, 4, 3, 2, 1, 0]}
           id="firstBitgroup" />
       </div>
     )

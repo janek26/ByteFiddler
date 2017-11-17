@@ -1,37 +1,20 @@
-"use strict";
+import { changePosition7, changePosition6, changePosition5, changePosition4 } from "../../actions/bitButtonActions";
+import { changePosition3, changePosition2, changePosition1, changePosition0 } from "../../actions/bitButtonActions";
+import BitButton from '../logicalComponents/BitButton';
 
-
-/**
- * BitButtonGroup
- * Creates a group of Buttons for switching different bit-positions
- *
- * props.numbers:  Array with numbers for identification
- * props.id:       Group-ID
- */
 export default class BitButtonGroup extends React.Component {
-  handleBitClick (groupId, number, e) {
-    if (groupId == 'firstBitgroup') {
-        console.log(groupId, number);
-    } else if (groupId == 'secondBitgroup') {
-        console.log(groupId, number);
-    }
-  }
-
   render() {
-    let groupId = this.props.id;
-
-    /** Mapping Numbers to Buttons */
-    let buttonItems = this.props.numbers.map((number) =>
-      <button
-      key={groupId+number}
-      className={'b'+number}
-      onClick={(e) => this.handleBitClick(groupId, number, e)}>Bit {number}</button>
-    );
-
-    return (
-      <div id={groupId}>
-        {buttonItems}
+    return(
+      <div>
+      <BitButton onClick={changePosition7} text="Bit 7"/>
+      <BitButton onClick={changePosition6} text="Bit 6"/>
+      <BitButton onClick={changePosition5} text="Bit 5"/>
+      <BitButton onClick={changePosition4} text="Bit 4"/>
+      <BitButton onClick={changePosition3} text="Bit 3"/>
+      <BitButton onClick={changePosition2} text="Bit 2"/>
+      <BitButton onClick={changePosition1} text="Bit 1"/>
+      <BitButton onClick={changePosition0} text="Bit 0"/>
       </div>
-    );
+    )
   }
-};
+}

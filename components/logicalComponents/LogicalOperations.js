@@ -1,8 +1,9 @@
 "use strict";
 
-import BitDisplay         from '../BitDisplay';
-import BitOperationsGroup from '../logicalComponents/BitOperationsGroup';
-import SingleBitGroup     from '../logicalComponents/SingleBitGroup';
+import BitDisplay                 from '../BitDisplay';
+import SingleBitGroup             from '../logicalComponents/SingleBitGroup';
+import BitOperationButtonGroup    from '../logicalComponents/BitOperationButtonGroup';
+
 
 /** States of single bits */
 let result          = [0, 0, 0, 0, 0, 0, 0, 0];
@@ -17,8 +18,7 @@ export default class LogicalOperations extends React.Component {
         <SingleBitGroup
           name="firstBitDisplay"
           topic="Operand 1" />
-        <BitOperationsGroup />
-
+        <BitOperationButtonGroup />
         <SingleBitGroup
           name="secondBitDisplay"
           topic="Operand 2" />
