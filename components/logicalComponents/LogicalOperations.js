@@ -3,10 +3,14 @@
 import BitDisplay                 from '../BitDisplay';
 import SingleBitGroup             from '../logicalComponents/SingleBitGroup';
 import BitOperationButtonGroup    from '../logicalComponents/BitOperationButtonGroup';
+import { createStore }            from 'redux'
+import logicalReducer             from '../../reducers'
 
-
-/** States of single bits */
-let result          = [0, 0, 0, 0, 0, 0, 0, 0];
+let result =
+  createStore(logicalReducer)
+  .getState()
+  .logicalReducer[0]
+  .result;
 
 let CreateCaption = props => (<h3>{props.topic}</h3>);
 
@@ -17,8 +21,10 @@ export default class LogicalOperations extends React.Component {
       <div>
         <SingleBitGroup
           name="firstBitDisplay"
-          topic="Operand 1" />
+          topic="Operand 1" /><br />
+
         <BitOperationButtonGroup />
+
         <SingleBitGroup
           name="secondBitDisplay"
           topic="Operand 2" />

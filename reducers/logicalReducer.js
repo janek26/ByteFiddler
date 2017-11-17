@@ -1,31 +1,20 @@
 export default (state = [
   {
-    a0: '00000000',
-    done: false,
-    visible: true,
+    bits0:  [0, 1, 0, 1, 0, 1, 0, 1],
+    bits1:  [1, 0, 1, 0, 1, 0, 1, 0],
+    result: [0, 0, 0, 0, 1, 1, 1, 1],
   }
 ], action) => {
   switch (action.type) {
-    case 'TODOS.CREATE': {
+    case 'CHANGE_DISPLAY': {
       return [...state, {
         text: action.payload,
-        done: false,
-        visible: true,
-        test: true
       }]
     }
     case 'TODOS.REMOVE': {
       return [...state].filter(
         x => x.text !== action.payload
       )
-    }
-    case 'OP.MUL': {
-      return [...state, {
-        text: action.payload,
-        done: false,
-        visible: true,
-        test: true
-      }]
     }
     default: {
       return state

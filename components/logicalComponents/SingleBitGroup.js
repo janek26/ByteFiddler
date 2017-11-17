@@ -1,15 +1,21 @@
 "use strict";
 
+import { Component }      from 'react';
 import BitDisplay         from '../BitDisplay';
 import BitButtonGroup     from '../logicalComponents/BitButtonGroup';
 
-let firstBitgroup   = [1, 0, 1, 0, 1, 0, 1, 0];
-let secondBitgroup  = [0, 1, 0, 1, 0, 1, 0, 1];
+import { createStore } from 'redux'
+import logicalReducer from '../../reducers'
+let store = createStore(logicalReducer)
 
-export default class SingleBitGroup extends React.Component {
+let firstBitgroup   = store.getState().logicalReducer[0].bits0;
+let secondBitgroup  = store.getState().logicalReducer[0].bits1;
+
+class SingleBitGroup extends Component {
   render() {
     let name  = this.props.id;
     let topic = this.props.topic;
+    console.log(store.getState())
 
     return(
       <div>
@@ -18,9 +24,10 @@ export default class SingleBitGroup extends React.Component {
           digits={firstBitgroup}
           fixedNumberOfBits={8}
           id="{name}" />
-        <BitButtonGroup
-          id="firstBitgroup" />
+        <BitButtonGroup />
       </div>
     )
   }
 }
+
+export default SingleBitGroup

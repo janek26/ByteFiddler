@@ -14,5 +14,4 @@ BitButton.propTypes = {
   text: PropTypes.string.isRequired
 }
 
-
 export default BitButton
