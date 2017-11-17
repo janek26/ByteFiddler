@@ -1,8 +1,8 @@
 "use strict";
 
 import BitDisplay         from '../BitDisplay';
-import BitOperationsGroup from '../logical-operations/BitOperationsGroup';
-import SingleBitGroup     from '../logical-operations/SingleBitGroup';
+import BitOperationsGroup from '../logicalComponents/BitOperationsGroup';
+import SingleBitGroup     from '../logicalComponents/SingleBitGroup';
 
 /** States of single bits */
 let result          = [0, 0, 0, 0, 0, 0, 0, 0];

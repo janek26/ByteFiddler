@@ -1,7 +1,7 @@
 "use strict";
 
 import BitDisplay         from '../BitDisplay';
-import BitButtonGroup     from '../logical-operations/BitButtonGroup';
+import BitButtonGroup     from '../logicalComponents/BitButtonGroup';
 
 let firstBitgroup   = [1, 0, 1, 0, 1, 0, 1, 0];
 let secondBitgroup  = [0, 1, 0, 1, 0, 1, 0, 1];
