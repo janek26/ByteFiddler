@@ -8,16 +8,15 @@ const initialState = {
 }
 
 function logicalReducer(state = initialState, action) {
-console.log("Type: " + action.type)
+console.log("action.type: " + action.type)
+
   switch (action.type) {
     case 'CHANGE_BIT_0': {
-    console.log(action)
 
       return [
         ...state,
         {
-          text: action.text,
-          completed: false
+          text: action.text
         }
       ]
     }
@@ -28,8 +27,7 @@ console.log("Type: " + action.type)
       return [
         ...state,
         {
-          text: action.text,
-          completed: false
+          text: action.text
         }
       ]
     }
