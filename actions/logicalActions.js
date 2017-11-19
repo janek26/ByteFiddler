@@ -1,7 +1,6 @@
 /*
  * action types
  */
-
 export const OP_AND = 'OP_AND'
 export const OP_OR = 'OP_OR'
 export const OP_XOR = 'OP_XOR'
@@ -16,7 +15,6 @@ export const OP_DIV = 'OP_DIV'
 /*
  * action creators
  */
-
 export function andBits(text) {
   console.log("andBits");
   return { type: OP_AND, text }

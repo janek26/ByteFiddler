@@ -35,14 +35,7 @@ export default withRedux(initStore)(
       subBits: bindActionCreators(lAct.subBits, dispatch),
       mulBits: bindActionCreators(lAct.mulBits, dispatch),
       divBits: bindActionCreators(lAct.divBits, dispatch),
-      changePosition0: bindActionCreators(bAct.changePosition0, dispatch),
-      changePosition1: bindActionCreators(bAct.changePosition1, dispatch),
-      changePosition2: bindActionCreators(bAct.changePosition2, dispatch),
-      changePosition3: bindActionCreators(bAct.changePosition3, dispatch),
-      changePosition4: bindActionCreators(bAct.changePosition4, dispatch),
-      changePosition5: bindActionCreators(bAct.changePosition5, dispatch),
-      changePosition6: bindActionCreators(bAct.changePosition6, dispatch),
-      changePosition7: bindActionCreators(bAct.changePosition7, dispatch),
+      changeBitPosition: bindActionCreators(bAct.changeBitPosition, dispatch),
     })
   )(ReduxComponent)
 )
