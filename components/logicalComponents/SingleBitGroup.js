@@ -15,7 +15,6 @@ class SingleBitGroup extends Component {
   render() {
     let name  = this.props.id;
     let topic = this.props.topic;
-    console.log(store.getState())
 
     return(
       <div>
