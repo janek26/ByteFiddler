@@ -1,16 +1,13 @@
-"use strict";
-
 import BitDisplay                 from '../BitDisplay';
 import SingleBitGroup             from '../logicalComponents/SingleBitGroup';
 import BitOperationButtonGroup    from '../logicalComponents/BitOperationButtonGroup';
-import { createStore }            from 'redux'
-import logicalReducer             from '../../reducers'
 
-let result =
-  createStore(logicalReducer)
-  .getState()
-  .logicalReducer[0]
-  .result;
+import { createStore }            from 'redux'
+import logicalReducer             from '../../reducers/logicalReducer';
+
+const store = createStore(logicalReducer);
+let result = store.getState().result;
+
 
 let CreateCaption = props => (<h3>{props.topic}</h3>);
 

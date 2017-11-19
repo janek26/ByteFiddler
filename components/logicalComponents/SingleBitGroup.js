@@ -1,17 +1,15 @@
-"use strict";
-
-import { Component }      from 'react';
 import BitDisplay         from '../BitDisplay';
 import BitButtonGroup     from '../logicalComponents/BitButtonGroup';
 
-import { createStore } from 'redux'
-import logicalReducer from '../../reducers'
-let store = createStore(logicalReducer)
+import { createStore }    from 'redux'
+import logicalReducer     from '../../reducers/logicalReducer';
 
-let firstBitgroup   = store.getState().logicalReducer[0].bits0;
-let secondBitgroup  = store.getState().logicalReducer[0].bits1;
+const store = createStore(logicalReducer);
 
-class SingleBitGroup extends Component {
+let firstBitgroup   = store.getState().bits0;
+let secondBitgroup  = store.getState().bits1;
+
+class SingleBitGroup extends React.Component {
   render() {
     let name  = this.props.id;
     let topic = this.props.topic;
