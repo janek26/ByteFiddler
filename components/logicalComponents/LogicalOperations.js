@@ -1,9 +1,8 @@
-import BitDisplay                 from '../BitDisplay';
-import SingleBitGroup             from '../logicalComponents/SingleBitGroup';
-import BitOperations              from '../logicalComponents/BitOperations';
-
-import { createStore }            from 'redux'
-import logicalReducer             from '../../reducers/logicalReducer';
+import { createStore }    from 'redux'
+import BitDisplay         from '../BitDisplay';
+import SingleBitGroup     from '../logicalComponents/SingleBitGroup';
+import BitOperations      from '../logicalComponents/BitOperations';
+import logicalReducer     from '../../reducers/logicalReducer';
 
 const store = createStore(logicalReducer);
 let result = store.getState().result;

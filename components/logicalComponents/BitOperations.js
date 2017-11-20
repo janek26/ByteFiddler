@@ -1,7 +1,6 @@
+import { createStore }    from 'redux'
 import * as l             from "../../actions/logicalActions";
 import Button             from '../logicalComponents/Button';
-
-import { createStore }    from 'redux'
 import logicalReducer     from '../../reducers/logicalReducer';
 
 const store = createStore(logicalReducer);

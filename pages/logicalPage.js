@@ -1,7 +1,6 @@
-import { createStore }        from "redux";
-
-import LogicalOperations      from '../components/logicalComponents/LogicalOperations';
-import logicalReducer         from '../reducers/logicalReducer';
+import { createStore }    from "redux";
+import LogicalOperations  from '../components/logicalComponents/LogicalOperations';
+import logicalReducer     from '../reducers/logicalReducer';
 
 const store = createStore(logicalReducer);
 console.log(store.getState());

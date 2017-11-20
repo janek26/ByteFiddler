@@ -1,7 +1,6 @@
+import { createStore }    from 'redux'
 import BitDisplay         from '../BitDisplay';
 import BitSwitch          from '../logicalComponents/BitSwitch';
-
-import { createStore }    from 'redux'
 import logicalReducer     from '../../reducers/logicalReducer';
 
 const store = createStore(logicalReducer);
