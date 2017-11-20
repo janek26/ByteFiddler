@@ -1,7 +1,14 @@
+
+import React, { Component } from 'react'
+import withRedux from 'next-redux-wrapper'
+import { bindActionCreators } from "redux";
+import { initStore } from '../store'
+import { connect } from "react-redux";
+
 import { createStore }    from 'redux'
 import Lamperedux from '../reducers/Lamperedux'
 const rgba_value = (red, green, blue, transparency) => `rgba(${red},${green},${blue},${transparency})`
-export Lampestate ({
+export default ({
   red,
   green,
   blue,
@@ -15,7 +22,7 @@ export Lampestate ({
   </div>
   <style jsx>{`
     #ledrahmen {
-      background-color: black;
+      background-color: white;
       position: absolute;
       width: 200px;
       height: 200px;

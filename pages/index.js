@@ -3,6 +3,11 @@ import BitDisplay from '../components/BitDisplay'
 import Voltmeter from '../components/Voltmeter'
 import Lampe from '../components/Lampe'
 
+import withRedux from 'next-redux-wrapper'
+import { bindActionCreators } from "redux";
+import { initStore } from '../store'
+import { connect } from "react-redux";
+
 export default class IndexPage extends Component {
 
   state = {
@@ -29,10 +34,7 @@ export default class IndexPage extends Component {
         />
         <br/>
         <Lampe
-        red= '255'
-        green='0'
-        blue='255'
-        transparency='1'
+
            />
       </div>
     )
