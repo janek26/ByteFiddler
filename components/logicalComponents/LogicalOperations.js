@@ -8,9 +8,9 @@ import logicalReducer             from '../../reducers/logicalReducer';
 const store = createStore(logicalReducer);
 let result = store.getState().result;
 
-
 let CreateCaption = props => (<h3>{props.topic}</h3>);
-export default class LogicalOperations extends React.Component {
+
+class LogicalOperations extends React.Component {
   render() {
 
     return(
@@ -34,3 +34,5 @@ export default class LogicalOperations extends React.Component {
     )
   }
 }
+
+export default LogicalOperations

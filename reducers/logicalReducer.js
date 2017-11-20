@@ -1,5 +1,4 @@
-import {  CHANGE_BIT } from '../actions/bitButtonActions'
-import {  OP_MUL } from '../actions/logicalActions'
+import {  CHANGE_BIT, LOGICAL_OPERATION } from '../actions/logicalActions'
 
 const initialState = {
   bits0:  [0, 1, 0, 1, 0, 1, 0, 1],
@@ -13,8 +12,8 @@ console.log("action.type: " + action.type)
 
   switch (action.type) {
     case 'CHANGE_BIT': {
-      let index = action.payload[0];
-      let group = action.payload[1];
+      let group = action.payload[0];
+      let index = action.payload[1];
 
       if (group == "first")
         state.bits0[index] = state.bits0[index] == 0 ? 1 : 0;
@@ -26,9 +25,10 @@ console.log("action.type: " + action.type)
       return Object.assign({},state,)
     }
 
-    case 'OP_MUL': {
-    console.log("Type: " + action.type)
+    case 'LOGICAL_OPERATION': {
+    let index = action.payload;
 
+    console.log(action.payload)
       return [
         ...state,
         {
