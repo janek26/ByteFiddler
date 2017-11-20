@@ -16,7 +16,7 @@ const subBits   = index => store.dispatch(l.subBits(index))
 const mulBits   = index => store.dispatch(l.mulBits(index))
 const divBits   = index => store.dispatch(l.divBits(index))
 
-export default class BitOperationButtonGroup extends React.Component {
+export default class BitOperations extends React.Component {
   render() {
     return(
       <div>

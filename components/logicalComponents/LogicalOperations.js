@@ -19,7 +19,7 @@ export default class LogicalOperations extends React.Component {
           name="first"
           topic="Operand 1" /><br />
 
-        <BitOperationButtonGroup />
+        <BitOperations />
 
         <SingleBitGroup
           name="second"
