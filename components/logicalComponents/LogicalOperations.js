@@ -17,13 +17,13 @@ export default class LogicalOperations extends React.Component {
     return(
       <div>
         <SingleBitGroup
-          name="firstBitDisplay"
+          name="first"
           topic="Operand 1" /><br />
 
         <BitOperationButtonGroup />
 
         <SingleBitGroup
-          name="secondBitDisplay"
+          name="second"
           topic="Operand 2" />
 
         <CreateCaption topic="Result" />

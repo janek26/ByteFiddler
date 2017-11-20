@@ -11,7 +11,7 @@ let secondBitgroup  = store.getState().bits1;
 
 class SingleBitGroup extends React.Component {
   render() {
-    let name  = this.props.id;
+    let name  = this.props.name;
     let topic = this.props.topic;
 
     return(
@@ -20,8 +20,8 @@ class SingleBitGroup extends React.Component {
         <BitDisplay
           digits={firstBitgroup}
           fixedNumberOfBits={8}
-          id="{name}" />
-        <BitButtonGroup />
+          name={this.props.name} />
+        <BitButtonGroup name={this.props.name} />
       </div>
     )
   }

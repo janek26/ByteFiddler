@@ -1,4 +1,4 @@
-import {  CHANGE_BIT_0 } from '../actions/bitButtonActions'
+import {  CHANGE_BIT } from '../actions/bitButtonActions'
 import {  OL_MUL } from '../actions/logicalActions'
 
 const initialState = {
@@ -7,18 +7,23 @@ const initialState = {
   result: [0, 0, 0, 0, 1, 1, 1, 1],
 }
 
+
 function logicalReducer(state = initialState, action) {
 console.log("action.type: " + action.type)
 
   switch (action.type) {
-    case 'CHANGE_BIT_0': {
+    case 'CHANGE_BIT': {
+      let index = action.payload[0];
+      let group = action.payload[1];
 
-      return [
-        ...state,
-        {
-          text: action.text
-        }
-      ]
+      if (group == "first")
+        state.bits0[index] = state.bits0[index] == 0 ? 1 : 0;
+      else if (group == "second")
+        state.bits1[index] = state.bits1[index] == 0 ? 1 : 0;
+
+      console.log(state)
+
+      return Object.assign({},state,)
     }
 
     case 'OL_MUL': {
@@ -31,6 +36,7 @@ console.log("action.type: " + action.type)
         }
       ]
     }
+
     default: {
       return state
     }

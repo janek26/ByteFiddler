@@ -7,14 +7,14 @@ import logicalReducer     from '../../reducers/logicalReducer';
 const store = createStore(logicalReducer);
 let result = store.getState().result;
 
-const andBits = index => store.dispatch(l.andBits(index))
-const orBits = index => store.dispatch(l.orBits(index))
-const xorBits = index => store.dispatch(l.xorBits(index))
-const xnorBits = index => store.dispatch(l.xnorBits(index))
-const addBits = index => store.dispatch(l.addBits(index))
-const subBits = index => store.dispatch(l.subBits(index))
-const mulBits = index => store.dispatch(l.mulBits(index))
-const divBits = index => store.dispatch(l.divBits(index))
+const andBits   = index => store.dispatch(l.andBits(index))
+const orBits    = index => store.dispatch(l.orBits(index))
+const xorBits   = index => store.dispatch(l.xorBits(index))
+const xnorBits  = index => store.dispatch(l.xnorBits(index))
+const addBits   = index => store.dispatch(l.addBits(index))
+const subBits   = index => store.dispatch(l.subBits(index))
+const mulBits   = index => store.dispatch(l.mulBits(index))
+const divBits   = index => store.dispatch(l.divBits(index))
 
 export default class BitOperationButtonGroup extends React.Component {
   render() {
