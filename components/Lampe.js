@@ -1,7 +1,7 @@
 import { createStore }    from 'redux'
 import Lamperedux from '../reducers/Lamperedux'
 const rgba_value = (red, green, blue, transparency) => `rgba(${red},${green},${blue},${transparency})`
-export default ({
+export Lampestate ({
   red,
   green,
   blue,

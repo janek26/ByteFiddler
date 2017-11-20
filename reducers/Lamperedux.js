@@ -1,4 +1,4 @@
-import{default}from '../components/Lampe'
+import{ Lampestate}from '../components/Lampe'
 const initialstate={
 	red: 255,
 	green:255,
