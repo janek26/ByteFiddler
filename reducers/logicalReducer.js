@@ -1,5 +1,5 @@
 import {  CHANGE_BIT } from '../actions/bitButtonActions'
-import {  OL_MUL } from '../actions/logicalActions'
+import {  OP_MUL } from '../actions/logicalActions'
 
 const initialState = {
   bits0:  [0, 1, 0, 1, 0, 1, 0, 1],
@@ -26,7 +26,7 @@ console.log("action.type: " + action.type)
       return Object.assign({},state,)
     }
 
-    case 'OL_MUL': {
+    case 'OP_MUL': {
     console.log("Type: " + action.type)
 
       return [

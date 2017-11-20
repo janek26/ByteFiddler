@@ -1,6 +1,6 @@
 import BitDisplay                 from '../BitDisplay';
 import SingleBitGroup             from '../logicalComponents/SingleBitGroup';
-import BitOperationButtonGroup    from '../logicalComponents/BitOperationButtonGroup';
+import BitOperations              from '../logicalComponents/BitOperations';
 
 import { createStore }            from 'redux'
 import logicalReducer             from '../../reducers/logicalReducer';
@@ -10,7 +10,6 @@ let result = store.getState().result;
 
 
 let CreateCaption = props => (<h3>{props.topic}</h3>);
-
 export default class LogicalOperations extends React.Component {
   render() {
 

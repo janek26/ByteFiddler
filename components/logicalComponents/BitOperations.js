@@ -1,5 +1,5 @@
 import * as l             from "../../actions/logicalActions";
-import BitOperationButton from '../logicalComponents/BitOperationButton';
+import Button             from '../logicalComponents/Button';
 
 import { createStore }    from 'redux'
 import logicalReducer     from '../../reducers/logicalReducer';
@@ -20,14 +20,14 @@ export default class BitOperationButtonGroup extends React.Component {
   render() {
     return(
       <div>
-        <BitOperationButton onClick={andBits} text="and"/>
-        <BitOperationButton onClick={orBits} text="or"/>
-        <BitOperationButton onClick={xorBits} text="xor"/>
-        <BitOperationButton onClick={xnorBits} text="xnor"/>
-        <BitOperationButton onClick={addBits} text="add"/>
-        <BitOperationButton onClick={subBits} text="sub"/>
-        <BitOperationButton onClick={mulBits} text="mul"/>
-        <BitOperationButton onClick={divBits} text="div"/>
+        <Button onClick={andBits} text="and"/>
+        <Button onClick={orBits} text="or"/>
+        <Button onClick={xorBits} text="xor"/>
+        <Button onClick={xnorBits} text="xnor"/>
+        <Button onClick={addBits} text="add"/>
+        <Button onClick={subBits} text="sub"/>
+        <Button onClick={mulBits} text="mul"/>
+        <Button onClick={divBits} text="div"/>
       </div>
     )
   }

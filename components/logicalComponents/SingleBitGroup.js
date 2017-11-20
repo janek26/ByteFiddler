@@ -1,5 +1,5 @@
 import BitDisplay         from '../BitDisplay';
-import BitButtonGroup     from '../logicalComponents/BitButtonGroup';
+import BitSwitch          from '../logicalComponents/BitSwitch';
 
 import { createStore }    from 'redux'
 import logicalReducer     from '../../reducers/logicalReducer';
@@ -21,7 +21,7 @@ class SingleBitGroup extends React.Component {
           digits={firstBitgroup}
           fixedNumberOfBits={8}
           name={this.props.name} />
-        <BitButtonGroup name={this.props.name} />
+        <BitSwitch name={this.props.name} />
       </div>
     )
   }
