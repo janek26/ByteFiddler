@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import withRedux from 'next-redux-wrapper'
-import { bindActionCreators } from "redux";
+import { bindActionCreators } from "redux"
 import { initStore } from '../store'
-import { connect } from "react-redux";
+import { connect } from "react-redux"
 
 import { createTodo } from "../actions/todos";
 
