@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/janek26/ByteFiddler.svg?branch=master)](https://travis-ci.org/janek26/ByteFiddler)
+[![Maintainability](https://api.codeclimate.com/v1/badges/93e5d37d732786a12c9f/maintainability)](https://codeclimate.com/github/janek26/ByteFiddler/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/93e5d37d732786a12c9f/test_coverage)](https://codeclimate.com/github/janek26/ByteFiddler/test_coverage)
+![Dependencies](https://david-dm.org/janek26/bytefiddler.svg)
+
 # ByteFiddler
 
 Projectmanagment:
@@ -7,7 +12,7 @@ Projectmanagment:
 ## Skizze der Hauptseite
 Ist nur als Orientierung gedacht, 
 so kann das ganze angeortnet sein und/oder Aussehen.
-![Skizze](https://github.com/janek26/ByteFiddler/blob/Skizzen/skizzen/hauptseiteskizze.jpeg)
+![Skizze](https://raw.githubusercontent.com/janek26/ByteFiddler/master/skizzen/hauptseiteskizze.jpeg)
 
 ## How to start
 
