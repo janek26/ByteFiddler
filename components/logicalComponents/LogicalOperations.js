@@ -6,6 +6,7 @@ import BitDisplay     from '../BitDisplay';
 import SingleBitGroup from '../logicalComponents/SingleBitGroup';
 import BitOperations  from '../logicalComponents/BitOperations';
 import Flags          from '../logicalComponents/Flags';
+import DecValues      from '../logicalComponents/DecValues';
 
 let CreateCaption = props => (<h3>{props.topic}</h3>);
 
@@ -13,6 +14,7 @@ class LogicalOperations extends React.Component {
   render() {
     return(
       <div>
+        <DecValues />
         <SingleBitGroup
           name="first"
           topic="Operand 1" /><br />

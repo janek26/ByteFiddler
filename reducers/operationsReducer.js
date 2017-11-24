@@ -1,9 +1,16 @@
+import bin2dec from "../components/bin2dec"
+
+
+function operation_add(state) {
+//  changeBitToDual(state.bits0)
+  return state;
+}
 
 function setFlags(state) {
   /*
-  this.props.flags.zero,
-  this.props.flags.carry,
-  this.props.flags.parity
+  flags.zero,
+  flags.carry,
+  flags.parity
   */
   let r = state.result;
 
@@ -68,7 +75,12 @@ function logicalOperation(state, action) {
         state.result[x] = 0;
   }
 
+  if (action.payload == "ADD")
+    state = operation_add(state);
+
   state = setFlags(state);
+
+  state.decValues.result = bin2dec(state.result)
 
   return state;
 }
