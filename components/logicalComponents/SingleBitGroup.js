@@ -1,13 +1,8 @@
-import { createStore }    from 'redux'
-import BitDisplay         from '../BitDisplay';
-import BitSwitch          from '../logicalComponents/BitSwitch';
-import logicalReducer     from '../../reducers/logicalReducer';
-
-import withRedux from 'next-redux-wrapper'
-import { connect } from "react-redux"
+import withRedux     from 'next-redux-wrapper'
+import { connect }   from "react-redux"
 import { initStore } from '../../store'
-
-
+import BitDisplay    from '../BitDisplay';
+import BitSwitch     from '../logicalComponents/BitSwitch';
 
 class SingleBitGroup extends React.Component {
   render() {
