@@ -5,7 +5,6 @@ module.exports = {
     return {
       '/': { page: '/' },
       '/logicalPage': { page: '/logicalPage' },
-      '/logical-operations': { page: '/logical-operations' }
     }
   },
   assetPrefix: isExport ? './' : ''
