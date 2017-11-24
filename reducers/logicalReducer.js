@@ -5,13 +5,16 @@ import logicalOperation                   from './operationsReducer.js'
 const initialState = {
   bits0:  [0, 1, 0, 1, 0, 1, 0, 1],
   bits1:  [1, 0, 1, 0, 1, 0, 1, 0],
-  result: [0, 0, 0, 0, 1, 1, 1, 1],
+  result: [0, 0, 0, 0, 0, 0, 0, 0],
 }
 
 function logicalReducer(state = initialState, action) {
   switch (action.type) {
     case 'CHANGE_BIT':
-      return changeBit(state, action);
+      return {
+        ...state,
+          action: changeBit(state, action)
+        }
     case 'LOGICAL_OPERATION':
       return logicalOperation(state, action);
     default:

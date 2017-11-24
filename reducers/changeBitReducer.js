@@ -4,7 +4,7 @@ function changePosition(bitGroup, index) {
     bitGroup[index] = 1;
   else
     bitGroup[index] = 0;
-    
+
   return bitGroup;
 }
 
@@ -17,9 +17,7 @@ function changeBit(state, action) {
   else if (group == "second")
     state.bits1 = changePosition(state.bits1, index);
 
-  console.log("Group: " + group + ", Bit: " + index);
-  console.log(state)
-  return  Object.assign({},state,);
+  return state;
 }
 
 export default changeBit;

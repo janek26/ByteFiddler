@@ -8,10 +8,10 @@ import Button                 from '../logicalComponents/Button';
 
 class BitSwitch extends React.Component {
   render() {
-    let name = this.props.name,
+    let name  = this.props.name,
         props = this.props;
 
-    var changeBits = [0, 1, 2, 3, 4, 5, 6, 7].map(function(x) {
+    let changeBits = [7, 6, 5, 4, 3, 2, 1, 0].map(function(x) {
       return index => props.changeBit(name, x);
     });
 
