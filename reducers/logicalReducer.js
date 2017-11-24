@@ -6,6 +6,7 @@ const initialState = {
   bits0:  [0, 1, 0, 1, 0, 1, 0, 1],
   bits1:  [1, 0, 1, 0, 1, 0, 1, 0],
   result: [0, 0, 0, 0, 0, 0, 0, 0],
+  flags:  {carry: 0, zero: 1, parity: 1},
 }
 
 function logicalReducer(state = initialState, action) {
