@@ -15,8 +15,11 @@ function logicalReducer(state = initialState, action) {
         ...state,
           action: changeBit(state, action)
         }
-    case 'LOGICAL_OPERATION':
-      return logicalOperation(state, action);
+    case LOGICAL_OPERATION:
+      return {
+        ...state,
+        action: logicalOperation(state, action)
+      }
     default:
       return state
   }

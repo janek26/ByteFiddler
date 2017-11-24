@@ -1,6 +1,7 @@
 import withRedux     from 'next-redux-wrapper'
 import { connect }   from "react-redux"
 import { initStore } from '../../store'
+
 import BitDisplay    from '../BitDisplay';
 import BitSwitch     from '../logicalComponents/BitSwitch';
 

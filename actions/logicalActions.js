@@ -13,5 +13,5 @@ export function logicalOperation(operation) {
 }
 
 export function changeBit(group, index) {
-  return { type: 'CHANGE_BIT', payload: [group, index] }
+  return { type: CHANGE_BIT, payload: [group, index] }
 }

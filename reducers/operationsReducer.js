@@ -3,12 +3,7 @@ function logicalOperation(state, action) {
 
   console.log("Payload: " + action.payload);
 
-  return [
-    ...state,
-    {
-      text: action.text
-    }
-  ]
+  return state;
 }
 
 export default logicalOperation;
