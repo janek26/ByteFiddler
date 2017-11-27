@@ -3,8 +3,8 @@ import withRedux              from 'next-redux-wrapper'
 import { connect }            from "react-redux"
 import { initStore }          from '../../store'
 
-import { changeBit }          from "../../actions/logicalActions";
-import Button                 from '../logicalComponents/Button';
+import { changeBit, bitgroupAction } from "../../actions/logicalActions";
+import Button                     from '../logicalComponents/Button';
 
 class BitSwitch extends React.Component {
   render() {
@@ -19,9 +19,20 @@ class BitSwitch extends React.Component {
       return <Button onClick={changeBits[x]} key={x} text={"Bit "+ x}/>
     });
 
+    let operations =
+      ["NOT", "SHL", "SHR"].map(function(x) {
+      return index => props.bitgroupAction(name, x)
+    });
+
+    let groupActions = ["!", "<<< shift", "shift >>>"]
+      .map(function(x, index) {
+      return <Button onClick={operations[index]} key={x} text={x.toLowerCase()}/>
+    });
+
     return(
       <div>
         {buttons}
+        {groupActions}
       </div>
     )
   }
@@ -31,7 +42,8 @@ export default withRedux(initStore)(
   connect(
     s => s,
     dispatch => ({
-      changeBit: bindActionCreators(changeBit, dispatch)
+      changeBit: bindActionCreators(changeBit, dispatch),
+      bitgroupAction: bindActionCreators(bitgroupAction, dispatch)
     })
   )(BitSwitch)
 )

@@ -11,11 +11,13 @@ class BitOperations extends React.Component {
     let props = this.props;
 
     var operations =
-      ["AND", "OR", "XOR", "XNOR", "ADD", "SUB", "MUL", "DIV"].map(function(x) {
+      ["AND", "OR", "XOR", "XNOR", "ADD", "SUB", "MUL", "DIV"]
+      .map(function(x) {
         return index => props.logicalOperation(x);
       });
 
-      let buttons = ["AND", "OR", "XOR", "XNOR", "ADD", "SUB", "MUL", "DIV"].map(function(x, index) {
+      let buttons = ["AND", "OR", "XOR", "XNOR", "ADD", "SUB", "MUL", "DIV"]
+      .map(function(x, index) {
         return <Button onClick={operations[index]} key={x} text={x.toLowerCase()}/>
       });
     return(
