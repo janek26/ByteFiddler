@@ -31,7 +31,7 @@ function operationSwitch(state, action) {
         bit === state.bits1[index]
       ).map(x => x ? 1 : 0);
 
-    state.flags = setFlags(state);
+    state.flags = setFlags(state.result);
     state.flags.carry = 0;
     state.decValues.result = bin2dec(state.result);
   }
@@ -53,7 +53,7 @@ function operationSwitch(state, action) {
 
    carry = state.flags.carry == 1 ? 1 : 0;
 
-   state.flags = setFlags(state);
+   state.flags = setFlags(state.result);
    if (carry == 1)
      state.flags.carry = 1;
 
