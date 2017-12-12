@@ -1,6 +1,6 @@
 import { combineReducers } from "redux"
-import logicalReducer      from "./logicalReducer";
+import bitDisplay from "./bitDisplay";
 
 export default combineReducers({
-  logicalReducer
+  bitDisplay
 })
