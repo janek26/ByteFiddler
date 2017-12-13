@@ -1,10 +1,13 @@
 import Digit from './Digit'
+import Btn from './Btn'
+import Center from './Center'
 
 export default ({
     digits = [],
     fixedNumberOfBits,
     widthPerBit = 60,
-    ...rest
+    onToggleBit = id => {},
+    ...rest,
 }) => (
   <div style={{
     width: ((fixedNumberOfBits || digits.length) * widthPerBit)
@@ -12,7 +15,14 @@ export default ({
     <div className="display" >
       {
         (fixedNumberOfBits ? (new Array(fixedNumberOfBits)).fill(0) : digits).map((x,i) => 
-          <Digit {...rest} digit={digits[i]} key={i} />
+          <Center key={i}>
+            <Digit {...rest} digit={digits[i]} key={i} />
+            <Btn 
+              style={{marginTop: '1em'}} 
+              onClick={onToggleBit.bind(this, i)}
+              value={digits[i] === 1}
+            />
+          </Center>
         )
       }
     </div>
