@@ -1,10 +1,7 @@
-import { createStore }    from "redux";
+import withRedux          from 'next-redux-wrapper'
+import { connect }        from "react-redux"
+import { initStore }      from '../store'
 import LogicalOperations  from '../components/logicalComponents/LogicalOperations';
-import logicalReducer     from '../reducers/logicalReducer';
-import Link from 'next/link'
-
-const store = createStore(logicalReducer);
-console.log(store.getState());
 
 class ReduxComponent extends React.Component {
   render() {
@@ -30,4 +27,8 @@ class ReduxComponent extends React.Component {
   }
 }
 
-export default ReduxComponent;
+export default withRedux(initStore)(
+  connect(
+    s => s
+  )(ReduxComponent)
+)

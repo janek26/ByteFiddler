@@ -1,23 +1,26 @@
-import { createStore }    from 'redux'
-import BitDisplay         from '../BitDisplay';
-import BitSwitch          from '../logicalComponents/BitSwitch';
-import logicalReducer     from '../../reducers/logicalReducer';
+import withRedux     from 'next-redux-wrapper'
+import { connect }   from "react-redux"
+import { initStore } from '../../store'
 
-const store = createStore(logicalReducer);
-
-let firstBitgroup   = store.getState().bits0;
-let secondBitgroup  = store.getState().bits1;
+import BitDisplay    from '../BitDisplay';
+import BitSwitch     from '../logicalComponents/BitSwitch';
 
 class SingleBitGroup extends React.Component {
   render() {
-    let name  = this.props.name;
-    let topic = this.props.topic;
+    let name      = this.props.name,
+        topic     = this.props.topic,
+        bitgroup  = [];
+
+    if (this.props.name == "first")
+      bitgroup = this.props.bits0;
+    else if (this.props.name == "second")
+      bitgroup = this.props.bits1;
 
     return(
       <div>
         <h3>{topic}</h3>
         <BitDisplay
-          digits={firstBitgroup}
+          digits={bitgroup}
           fixedNumberOfBits={8}
           name={this.props.name} />
         <BitSwitch name={this.props.name} />
@@ -26,4 +29,8 @@ class SingleBitGroup extends React.Component {
   }
 }
 
-export default SingleBitGroup
+export default withRedux(initStore)(
+  connect(
+    s => s.logicalReducer
+  )(SingleBitGroup)
+)
