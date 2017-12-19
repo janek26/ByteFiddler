@@ -1,19 +1,20 @@
-import { createStore }    from 'redux'
-import BitDisplay         from '../BitDisplay';
-import SingleBitGroup     from '../logicalComponents/SingleBitGroup';
-import BitOperations      from '../logicalComponents/BitOperations';
-import logicalReducer     from '../../reducers/logicalReducer';
+import withRedux      from 'next-redux-wrapper'
+import { connect }    from "react-redux"
+import { initStore }  from '../../store'
 
-const store = createStore(logicalReducer);
-let result = store.getState().result;
+import BitDisplay     from '../BitDisplay';
+import SingleBitGroup from '../logicalComponents/SingleBitGroup';
+import BitOperations  from '../logicalComponents/BitOperations';
+import Flags          from '../logicalComponents/Flags';
+import DecValues      from '../logicalComponents/DecValues';
 
 let CreateCaption = props => (<h3>{props.topic}</h3>);
 
 class LogicalOperations extends React.Component {
   render() {
-
     return(
       <div>
+        <DecValues />
         <SingleBitGroup
           name="first"
           topic="Operand 1" /><br />
@@ -26,12 +27,18 @@ class LogicalOperations extends React.Component {
 
         <CreateCaption topic="Result" />
         <BitDisplay
-          digits={result}
+          digits={this.props.result}
           fixedNumberOfBits={8}
           id="resultBitDisplay" />
+
+        <Flags />
       </div>
     )
   }
 }
 
-export default LogicalOperations
+export default withRedux(initStore)(
+  connect(
+    s => s.logicalReducer
+  )(LogicalOperations)
+)
