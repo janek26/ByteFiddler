@@ -7,6 +7,7 @@ export default ({
     fixedNumberOfBits,
     widthPerBit = 60,
     onToggleBit = id => {},
+    withButtons = false,
     ...rest,
 }) => (
   <div style={{
@@ -17,11 +18,11 @@ export default ({
         (fixedNumberOfBits ? (new Array(fixedNumberOfBits)).fill(0) : digits).map((x,i) => 
           <Center key={i}>
             <Digit {...rest} digit={digits[i]} key={i} />
-            <Btn 
+            {withButtons && <Btn 
               style={{marginTop: '1em'}} 
               onClick={onToggleBit.bind(this, i)}
               value={digits[i] === 1}
-            />
+            />}
           </Center>
         )
       }

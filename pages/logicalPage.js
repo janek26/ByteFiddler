@@ -2,6 +2,7 @@ import withRedux          from 'next-redux-wrapper'
 import { connect }        from "react-redux"
 import { initStore }      from '../store'
 import LogicalOperations  from '../components/logicalComponents/LogicalOperations';
+import Link from 'next/link'
 
 class ReduxComponent extends React.Component {
   render() {
