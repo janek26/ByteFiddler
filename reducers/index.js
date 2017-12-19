@@ -1,9 +1,9 @@
 import { combineReducers } from "redux"
 
-import todos from "./todos";
-import  lampeReducer from "./lampeReducer"
+import lampeReducer from "./lampeReducer"
+import bitDisplay from "./bitDisplay"
 
 export default combineReducers({
-  todos,
+  bitDisplay,
   lampeReducer,
 })

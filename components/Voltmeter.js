@@ -1,7 +1,7 @@
 const calcDeg = (value, minDeg = -120, maxDeg = 120) => 
-  minDeg + (value * ((maxDeg - minDeg) / 100))
+  minDeg + ((((value-1)%100)+1) * ((maxDeg - minDeg) / 100))
 const renderNumber = (count, min, max) => ((max-min)/10)*count
-const calcProcent = (value, min, max) => value / (max-min)
+const calcProcent = (value, min, max) => (((value-1)%100)+1)/ (max-min)
 
 export default ({
   value = 0,
