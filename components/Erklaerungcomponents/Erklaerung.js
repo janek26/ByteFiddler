@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import './Erklaerung.css';
-import name from './Name';
+import name from './name';
 
 export default class Erklaerung extends Component {
   render() {
@@ -27,6 +26,34 @@ export default class Erklaerung extends Component {
        </tr>
         {tools}
 	    </table>
+      <style jsx>{`
+        table
+        {
+        width:50%;
+        border-collapse:collapse;
+        }
+        table th, td
+      {
+      border: 1.5px solid black;
+      }
+      td{
+      background-color:gray;
+      color:white;
+      }
+      th
+        {
+        background-color:Black;
+        color:orange;
+        }
+        div{
+          overflow-x:auto;
+          overflow-y: auto;
+          height: 500px;
+          width:280px;
+      
+        }
+      
+      `}</style>
     </div>
     );
   }
