@@ -6,15 +6,17 @@ import BitDisplay     from '../BitDisplay';
 import SingleBitGroup from '../logicalComponents/SingleBitGroup';
 import BitOperations  from '../logicalComponents/BitOperations';
 import Flags          from '../logicalComponents/Flags';
-import DecValues      from '../logicalComponents/DecValues';
-
-let CreateCaption = props => (<h3>{props.topic}</h3>);
 
 class LogicalOperations extends React.Component {
   render() {
     return(
       <div>
-        <DecValues />
+      <style jsx>{`
+        .topic {
+          text-align: center;
+        }
+      `}</style>
+
         <SingleBitGroup
           name="first"
           topic="Operand 1" /><br />
@@ -25,7 +27,7 @@ class LogicalOperations extends React.Component {
           name="second"
           topic="Operand 2" />
 
-        <CreateCaption topic="Result" />
+        <div className="topic">Result</div>
         <BitDisplay
           digits={this.props.result}
           fixedNumberOfBits={8}

@@ -18,12 +18,18 @@ class SingleBitGroup extends React.Component {
 
     return(
       <div>
-        <h3>{topic}</h3>
+      <style jsx>{`
+        .topic {
+          text-align: center;
+        }
+      `}</style>
+
+        <div className="topic">{topic}</div>
         <BitDisplay
           digits={bitgroup}
           fixedNumberOfBits={8}
           name={this.props.name} />
-        <BitSwitch name={this.props.name} />
+        <BitSwitch digits={bitgroup} name={this.props.name} />
       </div>
     )
   }

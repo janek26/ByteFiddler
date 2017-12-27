@@ -8,12 +8,14 @@ class DecValues extends React.Component {
   render() {
 
     return(
-      <div>
+    <div>
+      <div className="result">
         <h3>Decimal Values</h3>
         <div>Operand1: {this.props.decValues.bits0}</div>
         <div>Operand2: {this.props.decValues.bits1}</div>
         <div>Signed Result: {this.props.decValues.result}</div>
       </div>
+    </div>
     )
   }
 }
