@@ -1,18 +1,35 @@
-import { createStore }    from "redux";
+import withRedux          from 'next-redux-wrapper'
+import { connect }        from "react-redux"
+import { initStore }      from '../store'
 import LogicalOperations  from '../components/logicalComponents/LogicalOperations';
-import logicalReducer     from '../reducers/logicalReducer';
-
-const store = createStore(logicalReducer);
-console.log(store.getState());
+import Link from 'next/link'
 
 class ReduxComponent extends React.Component {
   render() {
     return (
       <div>
         <LogicalOperations />
+        <div className='links'>
+          <Link href='/' ><span>Zur Index Seite</span></Link>
+        </div>
+        <style jsx>{`
+          .links {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 1em;
+          }
+          .links > * {
+            cursor: pointer;
+          }
+        `}</style>
       </div>
     )
   }
 }
 
-export default ReduxComponent;
+export default withRedux(initStore)(
+  connect(
+    s => s
+  )(ReduxComponent)
+)

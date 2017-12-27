@@ -14,8 +14,8 @@ export default ({
     />
     <style jsx>{`
       .lamp {
-        width: 250px;
-        height: 250px;
+        width: 120px;
+        height: 120px;
         border-radius: 50%;
         border: 10px solid black;
       }
