@@ -17,31 +17,44 @@ class BitSwitch extends React.Component {
       return index => props.bitgroupAction(name, x)
     });
 
-    let groupActions = ["!", "<<< shift", "shift >>>"]
-      .map(function(x, index) {
-      return <Button onClick={operations[index]} key={x} text={x.toLowerCase()}/>
-    });
-
     return(
       <div>
         <style jsx>{`
           .bitButtons {
             margin: 1em 0px;
-            display: flex;
-            flex-direction: row;
           }
           .bitGroupActions {
             margin: 1em 0px;
             display: flex;
             flex-direction: row;
           }
+          .topic {
+            margin-left: 5px;
+            margin-right: 154px;
+            padding: 5px 0;
+            font-size: 18px;
+            font-weight: bold;
+          }
+          .buttons {
+            margin: 0 8px;
+            padding: 5px 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #aba3a354;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            cursor: pointer;
+          }
+          .buttons:hover {
+            opacity: 0.8
+          }
+
         `}</style>
 
         <div className="bitGroupActions">
           <div className="topic">{this.props.topic}</div>
-          <Center className="groupActionButtons">
-            {groupActions}
-          </Center>
+          <div className="buttons" onClick={operations[0]}>!</div>
+          <div className="buttons" onClick={operations[1]}>&lt;&lt;&lt; shift</div>
+          <div className="buttons" onClick={operations[2]}>shift &gt;&gt;&gt;</div>
+
         </div>
       </div>
     )

@@ -16,13 +16,40 @@ class BitOperations extends React.Component {
         return index => props.logicalOperation(x);
       });
 
-      let buttons = ["AND", "OR", "XOR", "XNOR", "ADD", "SUB", "MUL", "DIV"]
-      .map(function(x, index) {
-        return <Button onClick={operations[index]} key={x} text={x.toLowerCase()}/>
-      });
     return(
       <div>
-        {buttons}
+        <style jsx>{`
+          .bitGroupActions {
+            margin: 1em 0px;
+            display: flex;
+            flex-direction: row;
+          }
+          .bitGroupActions>div {
+            margin: 0 8px;
+            padding: 5px 10px;
+            background-color: #f1f1f1;
+            background-image: linear-gradient(#fdfdfd,#67b7c3);
+            border: 1px solid #b6d0ef;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+            cursor: pointer;
+            font-weight: bold;
+          }
+          .bitGroupActions>div:hover {
+            opacity: 0.8
+          }
+
+        `}</style>
+
+        <div className="bitGroupActions">
+          <div onClick={operations[0]}>and</div>
+          <div onClick={operations[1]}>or</div>
+          <div onClick={operations[2]}>xor</div>
+          <div onClick={operations[3]}>xnor</div>
+          <div onClick={operations[4]}>add</div>
+          <div onClick={operations[5]}>sub</div>
+          <div onClick={operations[6]}>mul</div>
+          <div onClick={operations[7]}>div</div>
+        </div>
       </div>
     )
   }
