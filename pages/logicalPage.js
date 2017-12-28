@@ -1,9 +1,11 @@
 import withRedux          from 'next-redux-wrapper'
+import { bindActionCreators } from "redux"
 import { connect }        from "react-redux"
 import { initStore }      from '../store'
 import LogicalOperations  from '../components/logicalComponents/LogicalOperations';
 import Link               from 'next/link'
 import Center             from '../components/Center'
+import { showInfo }       from '../actions/logicalActions'
 
 class ReduxComponent extends React.Component {
   render() {
@@ -27,7 +29,7 @@ class ReduxComponent extends React.Component {
         }
       `}</style>
 
-      <img  className='logo' src="/static/1.png" width="200px" height="300px" />
+      <img onClick={this.props.showInfo} className='logo' src="/static/1.png" width="200px" height="300px" />
 
       <Center flex='row' style={{height: '90vh'}}>
         <Center>
@@ -46,6 +48,9 @@ class ReduxComponent extends React.Component {
 
 export default withRedux(initStore)(
   connect(
-    s => s
+    s => s.logicalReducer,
+    dispatch => ({
+      showInfo: bindActionCreators(showInfo, dispatch)
+    })
   )(ReduxComponent)
 )
