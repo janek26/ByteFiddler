@@ -32,6 +32,9 @@ class LogicalOperations extends React.Component {
           border: 1px solid #d2d2d2;
           box-shadow: 0 8px 6px -6px black;
         }
+        .firstBitgroup {
+          margin-top: 40px;
+        }
         .flags, .decValues {
           width: 200px;
           margin-left: 20px;
