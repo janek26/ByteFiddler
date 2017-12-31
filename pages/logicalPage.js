@@ -7,6 +7,7 @@ import Link               from 'next/link'
 import Center             from '../components/Center'
 import { showInfo }       from '../actions/logicalActions'
 
+
 class ReduxComponent extends React.Component {
   render() {
     return (

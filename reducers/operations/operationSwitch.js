@@ -34,6 +34,7 @@ function operationSwitch(state, action) {
     state.flags = setFlags(state.result);
     state.flags.carry = 0;
     state.decValues.result = bin2dec(state.result);
+    state.decValues.rest = 0;
   }
 
   // ADD/SUB/MUL/DIV benötigen alle Flags. Beim umwandeln
