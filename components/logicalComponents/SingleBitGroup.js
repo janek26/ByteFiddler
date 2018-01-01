@@ -30,8 +30,7 @@ class SingleBitGroup extends React.Component {
   }
 }
 
-export default withRedux(initStore)(
-  connect(
-    s => s.logicalReducer
-  )(SingleBitGroup)
-)
+
+export default connect(
+  s => s.logicalReducer
+)(SingleBitGroup)

@@ -63,11 +63,10 @@ class Flags extends React.Component {
   }
 }
 
-export default withRedux(initStore)(
-  connect(
-    s => s.logicalReducer,
-    dispatch => ({
-      showFlags: bindActionCreators(showFlags, dispatch)
-    })
-  )(Flags)
-)
+
+export default connect(
+  s => s.logicalReducer,
+  dispatch => ({
+    showFlags: bindActionCreators(showFlags, dispatch)
+  })
+)(Flags)

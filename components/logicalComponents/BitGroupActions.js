@@ -78,11 +78,9 @@ class BitSwitch extends React.Component {
   }
 }
 
-export default withRedux(initStore)(
-  connect(
-    s => s.logicalReducer,
-    dispatch => ({
-      bitgroupAction: bindActionCreators(bitgroupAction, dispatch)
-    })
-  )(BitSwitch)
-)
+export default connect(
+  s => s.logicalReducer,
+  dispatch => ({
+    bitgroupAction: bindActionCreators(bitgroupAction, dispatch)
+  })
+)(BitSwitch)

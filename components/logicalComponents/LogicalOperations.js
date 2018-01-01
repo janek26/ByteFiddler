@@ -89,8 +89,7 @@ class LogicalOperations extends React.Component {
   }
 }
 
-export default withRedux(initStore)(
-  connect(
-    s => s.logicalReducer
-  )(LogicalOperations)
-)
+
+export default connect(
+  s => s.logicalReducer
+)(LogicalOperations)
