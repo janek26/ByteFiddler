@@ -42,6 +42,7 @@ class ReduxComponent extends React.Component {
           z-index: 9999;
           background: #b1b1b1;
           font-family:Arial,sans-serif;
+          overflow-y: auto;
         }
 
       `}</style>
