@@ -9,7 +9,7 @@ export default ({
     <style jsx>{`
       .btn {
         height: 2em;
-        border: 1px solid #ccc;
+        border: 1px solid #696969;
         border-radius: .6em;
         cursor: pointer;
       }
@@ -18,10 +18,13 @@ export default ({
         height: 1.2em;
         border-radius: 50%;
         background-color: #2ecc71;
+        background-image: linear-gradient(green,lightgreen);
+
         transition: all 200ms ease-in-out;
       }
       .slider.off {
         background-color: #e74c3c;
+        background-image: linear-gradient(#ff1010,#823636);
         transform: translateY(.8em);
       }
     `}</style>

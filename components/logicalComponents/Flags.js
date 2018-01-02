@@ -6,10 +6,20 @@ import BitDisplay    from '../BitDisplay';
 
 class Flags extends React.Component {
   render() {
-    console.log(this.props.flags)
     return(
       <div>
-        <h3>Flags</h3>
+      <style jsx>{`
+        .topic {
+          padding: 5px 0;
+          font-size: 18px;
+          font-weight: bold;
+          margin-left: 5px;
+        }
+        .entry {
+          margin: 13px;
+        }
+      `}</style>
+        <div className="topic">Flags</div>
         <BitDisplay
           digits={[
             this.props.flags.zero,
@@ -18,9 +28,9 @@ class Flags extends React.Component {
           ]}
           fixedNumberOfBits={3}
           name="flags" />
-          <span>Zero </span>
-          <span>Carry </span>
-          <span>Parity</span>
+          <span className="entry">Zero</span>
+          <span className="entry">Carry</span>
+          <span className="entry">Parity</span>
       </div>
     )
   }

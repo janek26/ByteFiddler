@@ -3,6 +3,7 @@ import { connect }   from "react-redux"
 import { initStore } from '../../store'
 
 import BitDisplay    from '../BitDisplay';
+import BitGroupActions    from '../logicalComponents/BitGroupActions';
 import BitSwitch     from '../logicalComponents/BitSwitch';
 
 class SingleBitGroup extends React.Component {
@@ -18,12 +19,12 @@ class SingleBitGroup extends React.Component {
 
     return(
       <div>
-        <h3>{topic}</h3>
+        <BitGroupActions name={this.props.name} topic={topic}/>
         <BitDisplay
           digits={bitgroup}
           fixedNumberOfBits={8}
           name={this.props.name} />
-        <BitSwitch name={this.props.name} />
+        <BitSwitch digits={bitgroup} name={this.props.name} />
       </div>
     )
   }

@@ -8,30 +8,76 @@ import BitOperations  from '../logicalComponents/BitOperations';
 import Flags          from '../logicalComponents/Flags';
 import DecValues      from '../logicalComponents/DecValues';
 
-let CreateCaption = props => (<h3>{props.topic}</h3>);
-
 class LogicalOperations extends React.Component {
   render() {
     return(
       <div>
-        <DecValues />
-        <SingleBitGroup
-          name="first"
-          topic="Operand 1" /><br />
+      <style jsx>{`
+        .topic {
+          padding: 5px 0;
+          font-size: 18px;
+          font-weight: bold;
+          margin-left: 5px;
+        }
+        .resultContainer, .secondContainer {
+          display: flex;
+          flex-direction: row;
+        }
+        .resultContainer {
+          margin-top: 20px;
+        }
+        .firstBitgroup, .secondBitgroup, .resultBits {
+          width: 480px;
+          padding: 10px;
+          border: 1px solid #d2d2d2;
+          box-shadow: 0 8px 6px -6px black;
+        }
+        .firstBitgroup {
+          margin-top: 40px;
+        }
+        .flags, .decValues {
+          width: 200px;
+          margin-left: 20px;
+          border: 1px solid #d2d2d2;
+          box-shadow: 0 8px 6px -6px black;
+          padding: 5px;
+        }
+
+
+      `}</style>
+
+        <div className="firstBitgroup">
+          <SingleBitGroup
+            name="first"
+            topic="Operand 1" />
+        </div>
 
         <BitOperations />
 
-        <SingleBitGroup
-          name="second"
-          topic="Operand 2" />
+        <div className="secondContainer">
+          <div className="secondBitgroup">
+            <SingleBitGroup
+              name="second"
+              topic="Operand 2" />
+            </div>
 
-        <CreateCaption topic="Result" />
-        <BitDisplay
-          digits={this.props.result}
-          fixedNumberOfBits={8}
-          id="resultBitDisplay" />
+            <div className="decValues">
+              <DecValues />
+            </div>
+        </div>
 
-        <Flags />
+        <div className="resultContainer">
+          <div className="resultBits">
+            <div className="topic">Ergebnis</div>
+            <BitDisplay
+              digits={this.props.result}
+              fixedNumberOfBits={8}
+              id="resultBitDisplay" />
+          </div>
+          <div className="flags">
+            <Flags />
+          </div>
+        </div>
       </div>
     )
   }

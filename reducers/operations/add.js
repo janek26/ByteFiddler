@@ -15,6 +15,7 @@ export default function add(state) {
   } else
     state.flags.carry = 0;
 
+  state.decValues.rest = 0;
   state.decValues.result = decResult;
   state.result = dec2bin(binResult);
 

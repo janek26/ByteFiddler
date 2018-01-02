@@ -6,14 +6,21 @@ import { initStore }          from '../../store'
 
 class DecValues extends React.Component {
   render() {
+    let restString = "";
+
+    if (this.props.decValues.rest > 0)
+      restString = "Rest: " + this.props.decValues.rest;
 
     return(
-      <div>
-        <h3>Decimal Values</h3>
-        <div>Operand1: {this.props.decValues.bits0}</div>
-        <div>Operand2: {this.props.decValues.bits1}</div>
+    <div>
+      <div className="result">
+        <h3>Dezimale Werte</h3>
+        <div>Operand 1: {this.props.decValues.bits0}</div>
+        <div>Operand 2: {this.props.decValues.bits1}</div>
         <div>Signed Result: {this.props.decValues.result}</div>
+        <div>{restString}</div>
       </div>
+    </div>
     )
   }
 }

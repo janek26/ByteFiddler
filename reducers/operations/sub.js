@@ -15,6 +15,7 @@ export default function sub(state) {
     binResult = 256 + binResult;
   }
 
+  state.decValues.rest = 0;
   state.decValues.result = decResult;
   state.result = dec2bin(binResult);
 
