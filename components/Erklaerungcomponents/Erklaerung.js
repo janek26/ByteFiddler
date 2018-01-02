@@ -32,14 +32,15 @@ export default class Erklaerung extends Component {
      th
        {
          border-bottom: 1px solid black;
-         padding: 5px;
+         padding: 5px 10px 5px 0;
+         text-align: left;
         }
        div{
          overflow-x:auto;
          overflow-y: auto;
          height: 500px;
          width:340px;
-
+         font-family: Arial, sans-serif;
        }
 
      `}</style>

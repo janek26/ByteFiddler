@@ -1,6 +1,0 @@
-
-          window.__NEXT_REGISTER_PAGE('/lampe-test', function() {
-            var comp = module.exports=webpackJsonp([6],{247:function(e,t,r){e.exports=r(248)},248:function(e,t,r){"use strict";function u(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var n=r(4),l=u(n),a=r(1),o=u(a),s=r(2),p=u(s),d=r(5),c=u(d),i=r(6),f=u(i),m=r(0),_=u(m),h=r(16),y=u(h),b=r(17),v=r(13),R=r(120),g=u(R),N=(r(11),r(117)),j=(u(N),"D:\\src\\ByteFiddler\\pages\\lampe-test.js?entry"),k=function(e){function t(){return(0,o.default)(this,t),(0,c.default)(this,(t.__proto__||(0,l.default)(t)).apply(this,arguments))}return(0,f.default)(t,e),(0,p.default)(t,[{key:"render",value:function(){var e=[this.props.lampeReducer.red,this.props.lampeReducer.green,this.props.lampeReducer.blue,this.props.lampeReducer.transparency],t=e[0],r=e[1],u=e[2],n=e[3];return console.log(this.props.lampeReducer),_.default.createElement("div",{__source:{fileName:j,lineNumber:23}},_.default.createElement(g.default,{red:t,green:r,blue:u,transparency:n,__source:{fileName:j,lineNumber:24}}))}}]),t}(m.Component);t.default=(0,y.default)(b.initStore)((0,v.connect)(function(e){return e})(k))}},[247]);
-            return { page: comp.default }
-          })
-        
