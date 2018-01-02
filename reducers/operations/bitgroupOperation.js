@@ -30,11 +30,6 @@ function bitgroupOperation(state, action) {
       state.decValues.bits1 = bin2dec(state.bits1);
     }
 
-    state.decValues.result = 0;
-    state.result = dec2bin(state.decValues.result);
-    state.flags = setFlags(state.result);
-    state.flags.carry = 0;
-
     return state;
 }
 
