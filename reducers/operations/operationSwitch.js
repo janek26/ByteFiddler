@@ -59,7 +59,9 @@ function operationSwitch(state, action) {
 
    }
 
-  return state;
+   state.activeOperation = op.toLowerCase();
+
+   return state;
 }
 
 export default operationSwitch;

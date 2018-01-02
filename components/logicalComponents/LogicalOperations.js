@@ -7,6 +7,7 @@ import SingleBitGroup from '../logicalComponents/SingleBitGroup';
 import BitOperations  from '../logicalComponents/BitOperations';
 import Flags          from '../logicalComponents/Flags';
 import DecValues      from '../logicalComponents/DecValues';
+import LogInfo        from '../logicalComponents/LogInfo';
 
 class LogicalOperations extends React.Component {
   render() {
@@ -19,7 +20,7 @@ class LogicalOperations extends React.Component {
           font-weight: bold;
           margin-left: 5px;
         }
-        .resultContainer, .secondContainer {
+        .firstContainer, .secondContainer, .resultContainer {
           display: flex;
           flex-direction: row;
         }
@@ -32,10 +33,10 @@ class LogicalOperations extends React.Component {
           border: 1px solid #d2d2d2;
           box-shadow: 0 8px 6px -6px black;
         }
-        .firstBitgroup {
+        .firstBitgroup, .logInfo {
           margin-top: 40px;
         }
-        .flags, .decValues {
+        .flags, .decValues, .logInfo {
           width: 200px;
           margin-left: 20px;
           border: 1px solid #d2d2d2;
@@ -46,11 +47,16 @@ class LogicalOperations extends React.Component {
 
       `}</style>
 
+      <div className="firstContainer">
         <div className="firstBitgroup">
           <SingleBitGroup
             name="first"
             topic="Operand 1" />
         </div>
+        <div className="logInfo">
+          <LogInfo />
+        </div>
+      </div>
 
         <BitOperations />
 

@@ -11,7 +11,9 @@ export default function mul(state) {
 
   if (binResult > 255) {
     binResult -= 256;
-  }
+    state.flags.carry = 1;
+  } else
+    state.flags.carry = 0;
 
 
   state.result = dec2bin(binResult);
