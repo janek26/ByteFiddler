@@ -1,6 +1,0 @@
-
-          window.__NEXT_REGISTER_PAGE('/lampe-test', function() {
-            var comp = module.exports=webpackJsonp([6],{253:function(e,t,r){e.exports=r(254)},254:function(e,t,r){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var u=r(4),l=n(u),a=r(1),o=n(a),p=r(2),d=n(p),s=r(5),c=n(s),i=r(6),f=n(i),m=r(0),h=n(m),_=r(19),v=n(_),y=r(21),R=r(15),b=r(122),g=n(b),k=(r(20),r(119)),x=(n(k),function(e){function t(){return(0,o.default)(this,t),(0,c.default)(this,(t.__proto__||(0,l.default)(t)).apply(this,arguments))}return(0,f.default)(t,e),(0,d.default)(t,[{key:"render",value:function(){var e=[this.props.lampeReducer.red,this.props.lampeReducer.green,this.props.lampeReducer.blue,this.props.lampeReducer.transparency],t=e[0],r=e[1],n=e[2],u=e[3];return console.log(this.props.lampeReducer),h.default.createElement("div",null,h.default.createElement(g.default,{red:t,green:r,blue:n,transparency:u}))}}]),t}(m.Component));t.default=(0,v.default)(y.initStore)((0,R.connect)(function(e){return e})(x))}},[253]);
-            return { page: comp.default }
-          })
-        

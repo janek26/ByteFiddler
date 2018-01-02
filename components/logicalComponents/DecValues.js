@@ -53,11 +53,10 @@ class DecValues extends React.Component {
   }
 }
 
-export default withRedux(initStore)(
-  connect(
-    s => s.logicalReducer,
-    dispatch => ({
-      showDecInfo: bindActionCreators(showDecInfo, dispatch)
-    })
-  )(DecValues)
-)
+
+export default connect(
+  s => s.logicalReducer,
+  dispatch => ({
+    showDecInfo: bindActionCreators(showDecInfo, dispatch)
+  })
+)(DecValues)

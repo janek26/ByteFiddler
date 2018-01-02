@@ -7,5 +7,5 @@ import bitDisplay from "./bitDisplay"
 export default combineReducers({
   bitDisplay,
   lampeReducer,
-  logicalReducer,
+  logicalReducer
 })

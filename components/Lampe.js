@@ -8,8 +8,8 @@ export default ({
   ...rest
 }) => (
   <div {...rest}>
-    <div 
-      className='lamp' 
+    <div
+      className='lamp'
       style={{backgroundColor: rgba_value(red, green, blue, transparency)}}
     />
     <style jsx>{`
@@ -17,7 +17,7 @@ export default ({
         width: 120px;
         height: 120px;
         border-radius: 50%;
-        border: 10px solid black;
+        border: 5px solid black;
       }
     `}</style>
     </div>

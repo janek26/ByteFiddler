@@ -4,7 +4,7 @@ module.exports = {
   exportPathMap: function () {
     return {
       '/': { page: '/' },
-      '/logicalPage': { page: '/logicalPage' },
+      '/logicalPage.html': { page: '/logicalPage' },
     }
   },
   assetPrefix: isExport ? './' : ''

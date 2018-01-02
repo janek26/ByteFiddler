@@ -63,11 +63,9 @@ class BitOperations extends React.Component {
   }
 }
 
-export default withRedux(initStore)(
-  connect(
-    s => s.logicalReducer,
-    dispatch => ({
-      logicalOperation: bindActionCreators(logicalOperation, dispatch)
-    })
-  )(BitOperations)
-)
+export default connect(
+  s => s.logicalReducer,
+  dispatch => ({
+    logicalOperation: bindActionCreators(logicalOperation, dispatch)
+  })
+)(BitOperations)

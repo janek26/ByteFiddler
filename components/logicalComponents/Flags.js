@@ -18,7 +18,7 @@ class Flags extends React.Component {
           margin-left: 5px;
         }
         .entry {
-          margin: 13px;
+          margin: 11px;
         }
         .help {
           border: 1px solid #696969;
@@ -43,18 +43,22 @@ class Flags extends React.Component {
         .help:hover {
           opacity: 0.9
         }
-
+        .flagNums {
+          margin-bottom: 5px;
+        }
       `}</style>
         <div className="topic">Flags</div>
         <div className="help" onClick={this.props.showFlags}>?</div>
-        <BitDisplay
-          digits={[
-            this.props.flags.zero,
-            this.props.flags.carry,
-            this.props.flags.parity
-          ]}
-          fixedNumberOfBits={3}
-          name="flags" />
+        <div className="flagNums">
+          <BitDisplay
+            digits={[
+              this.props.flags.zero,
+              this.props.flags.carry,
+              this.props.flags.parity
+            ]}
+            fixedNumberOfBits={3}
+            name="flags" />
+          </div>
           <span className="entry">Zero</span>
           <span className="entry">Carry</span>
           <span className="entry">Parity</span>
@@ -63,11 +67,10 @@ class Flags extends React.Component {
   }
 }
 
-export default withRedux(initStore)(
-  connect(
-    s => s.logicalReducer,
-    dispatch => ({
-      showFlags: bindActionCreators(showFlags, dispatch)
-    })
-  )(Flags)
-)
+
+export default connect(
+  s => s.logicalReducer,
+  dispatch => ({
+    showFlags: bindActionCreators(showFlags, dispatch)
+  })
+)(Flags)

@@ -36,6 +36,9 @@ class LogInfo extends React.Component {
       .help:hover {
         opacity: 0.9
       }
+        h3 {
+          margin-bottom: 0px;
+        }
     `}</style>
 
       <div className="info">
@@ -48,11 +51,10 @@ class LogInfo extends React.Component {
   }
 }
 
-export default withRedux(initStore)(
-  connect(
-    s => s.logicalReducer,
-    dispatch => ({
-      showInfo: bindActionCreators(showInfo, dispatch)
-    })
-  )(LogInfo)
-)
+
+export default connect(
+  s => s.logicalReducer,
+  dispatch => ({
+    showInfo: bindActionCreators(showInfo, dispatch)
+  })
+)(LogInfo)
