@@ -1,4 +1,4 @@
-const calcDeg = (value, minDeg = -120, maxDeg = 120) => 
+const calcDeg = (value, minDeg = -120, maxDeg = 120) =>
   minDeg + ((((value-1)%100)+1) * ((maxDeg - minDeg) / 100))
 const renderNumber = (count, min, max) => ((max-min)/10)*count
 const calcProcent = (value, min, max) => (((value-1)%100)+1)/ (max-min)
@@ -36,34 +36,33 @@ export default ({
         </div>
         <div className="voltage">{(calcProcent(value, min, max)*100).toFixed(2)}%</div>
         <div className="line" style={{transform: `rotate(${calcDeg(value)}deg)`}}></div>
-        <div className="voltage"></div>
         <div className="pin"><div className="inner"></div></div>
       </div>
       <style jsx>{`
         #voltmeter{
           background:#171717;
           margin:100px auto;
-          width:600px;
-          height:600px;
+          width:300px;
+          height:300px;
           box-shadow: inset 0px 0px 9px 3px rgba(0, 0, 0, 1);
           border: 5px solid #171717;
           border-radius: 100%;
           display: block;
-          position: relative;  
+          position: relative;
         }
 
 
         .ii {
           position: absolute;
-          width: 600px;
-          height: 600px;
+          width: 300px;
+          height: 300px;
           z-index: 2;
-          
+
         }
         .ii div {
           position: absolute;
-          width: 600px;
-          height: 600px;
+          width: 300px;
+          height: 300px;
           padding:4px;
           box-sizing: border-box;
         }
@@ -75,7 +74,7 @@ export default ({
           height: 20px;
           background: #FFF;
           margin: 0 -5px 0;
-          
+
         }
         .ii div:nth-child(2n+1) b {
           width: 10px;
@@ -153,31 +152,32 @@ export default ({
           display: block;
           position: absolute;
           width: 10px;
-          font-size:40px;
+          font-size:18px;
           text-align: center;
           text-transform: uppercase;
           font-family: 'Open Sans', sans-serif;
           text-decoration:none;
-            
+
         }
 
-        .num_1 {transform: rotate(120deg); top:20px;}
-        .num_2 {transform: rotate(96deg); top:13px; left:5px}
-        .num_3 {transform: rotate(74deg); top:21px;}
-        .num_4 {transform: rotate(50deg); top:25px;}
-        .num_5 {transform: rotate(26deg);  top:30px;left:-8px}
-        .num_6 {transform: rotate(2deg); top:35px;left:-8px}
-        .num_7 {transform: rotate(338deg); top:40px;left:-7px;}
-        .num_8 {transform: rotate(314deg);top:45px; left:-4px}
-        .num_9 {transform: rotate(290deg);top:50px;}
-        .num_10 {transform: rotate(266deg);top:60px;left:8px}
-        .num_11 {transform: rotate(242deg);top:75px;left:8px}
+        .num_1 {transform: rotate(120deg); top:40px;}
+        .num_2 {transform: rotate(96deg); top:33px;}
+        .num_3 {transform: rotate(74deg); top:33px;}
+        .num_4 {transform: rotate(50deg); top:35px;}
+        .num_5 {transform: rotate(26deg);  top:34px;left:-5px}
+        .num_6 {transform: rotate(2deg); top:37px;left:-5px}
+        .num_7 {transform: rotate(338deg); top:40px;left:-5px;}
+        .num_8 {transform: rotate(314deg);top:45px;}
+        .num_9 {transform: rotate(290deg);top:47px;}
+        .num_10 {transform: rotate(266deg);top:48px;}
+        .num_11 {transform: rotate(242deg);top:53px;left:7px}
 
         .voltage {
           color:#FFF;
-          left:39%;
-          top:70%;
-          font-size:60px;
+          left:45%;
+          top:80%;
+          font-size:30px;
+          text-align: center;
           margin: -25px 0 0 -25px;
           border-radius: 50%;
           position: absolute;
@@ -193,10 +193,10 @@ export default ({
           top: 50%;
           width: 0;
           transform-origin: 50% 100%;
-          margin: -285px -8px 0;
-          padding: 285px 8px 0;
+          margin: -75px -7px 0;
+          padding: 75px 7px 0;
           z-index:2;
-          border-radius: 50% 50% 0 0;           
+          border-radius: 50% 50% 0 0;
         }
 
         .pin {

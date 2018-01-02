@@ -36,6 +36,9 @@ class LogInfo extends React.Component {
       .help:hover {
         opacity: 0.9
       }
+        h3 {
+          margin-bottom: 0px;
+        }
     `}</style>
 
       <div className="info">

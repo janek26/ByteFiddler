@@ -69,8 +69,8 @@ class BitSwitch extends React.Component {
         <div className="bitGroupActions">
           <div className="topic">{this.props.topic}</div>
           <div className={`buttons ${activeOperation==='not'&&activeGroup==group ? 'on' : 'off'}`} onClick={operations[0]}>!</div>
-          <div className={`buttons ${activeOperation==='shl'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[1]}>&lt;&lt;&lt; shift</div>
-          <div className={`buttons ${activeOperation==='shr'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[2]}>shift &gt;&gt;&gt;</div>
+          <div className={`buttons ${activeOperation==='shl'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[1]}>&lt;&lt; shift</div>
+          <div className={`buttons ${activeOperation==='shr'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[2]}>shift &gt;&gt;</div>
 
         </div>
       </div>

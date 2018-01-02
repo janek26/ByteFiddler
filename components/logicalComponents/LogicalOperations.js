@@ -34,7 +34,7 @@ class LogicalOperations extends React.Component {
           box-shadow: 0 8px 6px -6px black;
         }
         .firstBitgroup, .logInfo {
-          margin-top: 40px;
+          margin-top: 10px;
         }
         .flags, .decValues, .logInfo {
           width: 200px;

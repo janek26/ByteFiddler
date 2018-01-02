@@ -13,12 +13,15 @@ class ReduxComponent extends React.Component {
     var hrefLink = process.env.NODE_ENV === 'production' ? 'index.html' : '/';
 
     return (
-      <div>
+      <div className="htmlBackground">
       <style jsx>{`
+        h3 {
+          margin-bottom: 0px;
+        }
         .links {
           position: absolute;
-          bottom: 0;
-          right: 0;
+          top: 280px;
+          right: 45px;
           padding: 1em;
         }
         .links > * {
@@ -30,15 +33,27 @@ class ReduxComponent extends React.Component {
           right: 0;
           padding: 0px 1em;
         }
+        .htmlBackground {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 9999;
+          background: #b1b1b1;
+          font-family:Arial,sans-serif;
+
+        }
+
       `}</style>
 
       <img onClick={this.props.showInfo} className='logo' src="static/1.png" width="200px" height="300px" />
 
-      <Center flex='row' style={{height: '90vh'}}>
+      <Center flex='row'>
         <Center>
           <LogicalOperations />
           <div className='links'>
-            <span onClick={() => Router.push(hrefLink)}>Zur Index Seite</span>
+            <span onClick={() => Router.push(hrefLink)}>Zur Hauptseite</span>
           </div>
         </Center>
       </Center>
