@@ -26,6 +26,8 @@ const initialState = {
     not:  ['not', 'Die Negation wirkt sich auf eine Bitgruppe aus. Hierbei wird jedes Bit negiert, das bedeutet aus einer 0 eine 1 wird und umgekehrt. Flags werden bei der Operation nicht gesetzt.'],
     shl:  ['shift left', 'Die Operation wirkt sich auf eine Bitgruppe aus. Hierbei wird die Bitgruppe nach links verschoben. Das rechte Bit wird auf 0 gesetzt und das linke Bit geht ins das Carry-Flag. Parity- und Zero-Flag werden nicht gesetzt.'],
     shr:  ['shift right', 'Die Operation wirkt sich auf eine Bitgruppe aus. Hierbei wird die Bitgruppe nach rechts verschoben. Das linke Bit wird auf 0 gesetzt und das rechte Bit geht ins das Carry-Flag. Parity- und Zero-Flag werden nicht gesetzt.'],
+    inc:  ['inc', 'Die Operation wirkt sich auf eine Bitgruppe aus. Hierbei wird der Wert des Bytes um eins erhöht. Im Gegensatz zu ADD wirkt sich INC nicht auf das Carry-Flags aus. Zero- und Parit-Flag werden nicht gesetzt.'],
+    dec:  ['dec', ' Die Operation wirkt sich auf eine Bitgruppe aus. Hierbei wird der Wert des Bytes um eins erhöht. Im Gegensatz zu SUB wirkt sich DEC nicht auf das Carry-Flag aus. Zero- und Parit-Flag werden nicht gesetzt.'],
   }
 
 }
