@@ -51,15 +51,15 @@ function bitgroupOperation(state, action) {
 
     if (group === "first") {
       state.bits0 = bits;
-        state.decValues.bits0 = bin2dec(state.bits0);
+      state.decValues.bits0 = bin2dec(state.bits0);
       state.activeGroup = 1;
     } else {
       state.bits1 = bits;
-        state.decValues.bits1 = bin2dec(state.bits1);
+      state.decValues.bits1 = bin2dec(state.bits1);
       state.activeGroup = 2;
     }
 
-    state.activeOperation = op.toLowerCase();
+    state.activeHelp = state.activeGroupOperation = op.toLowerCase();
     return state;
 }
 

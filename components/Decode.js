@@ -13,16 +13,16 @@ export default ({
 
       <div className='grid'>
         <div>
-          <h3>Decimal</h3>
-          <span>{digitsAsInt}</span>
+          <h2>Decimal</h2>
+          <h3>{digitsAsInt}</h3>
         </div>
         <div>
-          <h3>Hexadecimal</h3>
-          <span>{digitsAsHex}</span>
+          <h2>Hexadecimal</h2>
+          <h3>{digitsAsHex}</h3>
         </div>
         <div>
-          <h3>ASCII</h3>
-          <span>"{String.fromCharCode(digitsAsInt)}"</span>
+          <h2>ASCII</h2>
+          <h3>"{String.fromCharCode(digitsAsInt)}"</h3>
         </div>
 
       </div>
@@ -31,9 +31,10 @@ export default ({
           margin-top: 10px;
           display: grid;
           grid-template-columns: repeat(3, 1fr);
-          grid-gap: 1em;
+          text-align: center;
+          grid-gap: 10px;
           width: 100%;
-          padding: 10px;
+          padding: 5px;
           font-family: Arial, sans-serif;
         }
       `}</style>

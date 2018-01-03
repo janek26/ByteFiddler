@@ -21,7 +21,7 @@ class IndexPage extends Component {
 
   render () {
     const { toggleBit, bitDisplay } = this.props
-	
+
     var hrefLink = process.env.NODE_ENV === 'production' ? 'logicalPage.html' : '/logicalPage';
 
 
@@ -38,19 +38,20 @@ class IndexPage extends Component {
         .links:hover {
           text-decoration: underline;
         }
+
         .links > * {
           cursor: pointer;
         }
         .erklaerung {
+          margin-top: 75px;
           margin-right: 20px;
           padding: 10px;
           border: 1px solid #8e8b8b;
           box-shadow: 0 8px 6px -6px black;
-          margin-top: 75px;
         }
       }
       .decode {
-        width: 280px;
+        width: 340px;
         margin-left: 20px;
         padding: 10px;
         border: 1px solid #8e8b8b;
@@ -67,7 +68,7 @@ class IndexPage extends Component {
       .lampe {
         position: relative;
         top: 15px;
-        right: -300px;
+        left: 280px;
       }
       .voltmeter {
         margin-top: -130px;
@@ -85,7 +86,7 @@ class IndexPage extends Component {
       }
       .firstBlock {
         position: relative;
-        left: -150px;
+        left: -200px;
       }
       .htmlBackground {
         position: fixed;
