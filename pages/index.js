@@ -31,40 +31,43 @@ class IndexPage extends Component {
         .links {
           position: absolute;
           top: 280px;
-          right: 45px;
+          right: 30px;
           padding: 1em;
+          font-size: 18px;
+        }
+        .links:hover {
+          text-decoration: underline;
         }
         .links > * {
           cursor: pointer;
         }
         .erklaerung {
-          margin-right: 60px;
+          margin-right: 20px;
           padding: 10px;
-          border: 1px solid #d2d2d2;
+          border: 1px solid #8e8b8b;
           box-shadow: 0 8px 6px -6px black;
-
-
+          margin-top: 75px;
         }
       }
       .decode {
         width: 280px;
         margin-left: 20px;
         padding: 10px;
-        border: 1px solid #d2d2d2;
+        border: 1px solid #8e8b8b;
         box-shadow: 0 8px 6px -6px black;
 
       }
       .bitdisplay {
         width: 480px;
         padding: 10px;
-        border: 1px solid #d2d2d2;
+        border: 1px solid #8e8b8b;
         box-shadow: 0 8px 6px -6px black;
 
       }
       .lampe {
         position: relative;
         top: 15px;
-        left: -100px;
+        right: -300px;
       }
       .voltmeter {
         margin-top: -130px;
@@ -91,7 +94,8 @@ class IndexPage extends Component {
         width: 100%;
         height: 100%;
         z-index: 9999;
-        background: #b1b1b1;
+        background: #bbbaba;
+        font-family: Arial, sans-serif;
       }
 
       `}</style>

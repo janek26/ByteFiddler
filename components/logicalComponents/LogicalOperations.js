@@ -30,7 +30,7 @@ class LogicalOperations extends React.Component {
         .firstBitgroup, .secondBitgroup, .resultBits {
           width: 480px;
           padding: 10px;
-          border: 1px solid #d2d2d2;
+          border: 1px solid #8e8b8b;
           box-shadow: 0 8px 6px -6px black;
         }
         .firstBitgroup, .logInfo {
@@ -39,7 +39,7 @@ class LogicalOperations extends React.Component {
         .flags, .decValues, .logInfo {
           width: 200px;
           margin-left: 20px;
-          border: 1px solid #d2d2d2;
+          border: 1px solid #8e8b8b;
           box-shadow: 0 8px 6px -6px black;
           padding: 5px;
         }

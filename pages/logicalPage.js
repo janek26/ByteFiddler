@@ -21,8 +21,12 @@ class ReduxComponent extends React.Component {
         .links {
           position: absolute;
           top: 280px;
-          right: 45px;
+          right: 30px;
           padding: 1em;
+          font-size: 18px;
+        }
+        .links:hover {
+          text-decoration: underline;
         }
         .links > * {
           cursor: pointer;
@@ -40,8 +44,8 @@ class ReduxComponent extends React.Component {
           width: 100%;
           height: 100%;
           z-index: 9999;
-          background: #b1b1b1;
-          font-family:Arial,sans-serif;
+          background: #bbbaba;
+          font-family: Arial, sans-serif;
           overflow-y: auto;
         }
 

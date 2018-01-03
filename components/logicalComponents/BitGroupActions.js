@@ -22,7 +22,7 @@ class BitSwitch extends React.Component {
     }
 
     let operations =
-      ["NOT", "SHL", "SHR"].map(function(x) {
+      ["NOT", "INC", "DEC", "SHL", "SHR"].map(function(x) {
       return index => props.bitgroupAction(name, x)
     });
 
@@ -39,17 +39,17 @@ class BitSwitch extends React.Component {
           }
           .topic {
             margin-left: 5px;
-            margin-right: 154px;
+            margin-right: 42px;
             padding: 5px 0;
             font-size: 18px;
             font-weight: bold;
           }
           .buttons {
             margin: 0 8px;
-            padding: 5px 9px;
+            padding: 5px 8px;
             background-color: #f1f1f1;
-            background-image: linear-gradient(#fdfdfd,#67b7c3);
-            border: 1px solid #b6d0ef;
+            background-image: linear-gradient(#fdfdfd,#797979);
+            border: 1px solid #929292;
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
             cursor: pointer;
             font-weight: bold;
@@ -57,20 +57,24 @@ class BitSwitch extends React.Component {
             -webkit-user-select: none;
             -moz-user-select: none;
             user-select: none;
+            border-radius: 5px;
           }
           .buttons:hover {
             opacity: 0.9
           }
+
           .on {
-            background-image: linear-gradient(green, lightgreen);
+            background-image: linear-gradient(#bbbaba,white)
           }
         `}</style>
 
         <div className="bitGroupActions">
           <div className="topic">{this.props.topic}</div>
-          <div className={`buttons ${activeOperation==='not'&&activeGroup==group ? 'on' : 'off'}`} onClick={operations[0]}>!</div>
-          <div className={`buttons ${activeOperation==='shl'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[1]}>&lt;&lt; shift</div>
-          <div className={`buttons ${activeOperation==='shr'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[2]}>shift &gt;&gt;</div>
+          <div className={`buttons ${activeOperation==='not'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[0]}>~</div>
+          <div className={`buttons ${activeOperation==='inc'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[1]}>inc</div>
+          <div className={`buttons ${activeOperation==='dec'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[2]}>dec</div>
+          <div className={`buttons ${activeOperation==='shl'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[3]}>&lt;&lt; shift</div>
+          <div className={`buttons ${activeOperation==='shr'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[4]}>shift &gt;&gt;</div>
 
         </div>
       </div>

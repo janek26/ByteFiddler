@@ -24,7 +24,7 @@ export default ({
       }
       .slider.off {
         background-color: #e74c3c;
-        background-image: linear-gradient(#fd0000,#ea0b0b);
+        background-image: linear-gradient(red, lightcoral);
         transform: translateY(.8em);
       }
     `}</style>

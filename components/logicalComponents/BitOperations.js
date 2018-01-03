@@ -26,11 +26,11 @@ class BitOperations extends React.Component {
             flex-direction: row;
           }
           .buttons {
-            margin: 0 8px;
+            margin: 0 7px;
             padding: 5px 10px;
             background-color: #f1f1f1;
-            background-image: linear-gradient(#fdfdfd,#67b7c3);
-            border: 1px solid #b6d0ef;
+            background-image: linear-gradient(#fdfdfd,#797979);
+            border: 1px solid #929292;
             box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
             cursor: pointer;
             font-weight: bold;
@@ -38,12 +38,13 @@ class BitOperations extends React.Component {
             -webkit-user-select: none;
             -moz-user-select: none;
             user-select: none;
+            border-radius: 5px;
           }
           .buttons:hover {
             opacity: 0.9
           }
           .on {
-            background-image: linear-gradient(green, lightgreen);
+            background-image: linear-gradient(#bbbaba,white)
           }
 
         `}</style>
