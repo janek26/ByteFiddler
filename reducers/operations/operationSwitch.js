@@ -60,7 +60,7 @@ function operationSwitch(state, action) {
 
    }
 
-   state.activeOperation = op.toLowerCase();
+  state.activeHelp = state.activeOperation = op.toLowerCase();
 
    return state;
 }

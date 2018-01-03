@@ -9,8 +9,10 @@ const initialState = {
   result: [0, 0, 0, 0, 0, 0, 0, 0],
   flags:  {carry: 0, zero: 1, parity: 1, overflow: 0},
   decValues: {bits0: 23, bits1: 42, result: 0, rest:0},
+  activeGroupOperation: '',
   activeOperation: 'info',
   activeGroup: 0,
+  activeHelp: 'info',
   info: {
     info: ['Info', 'Die Operanden und das Ergebnis sind als Byte dargestellt. Operationen werden auf die Bytes angewendet. Das Ergebnis ist dezimal rechts zu sehen. Flags werden ggf. bei der Berechnung gesetzt.'],
     info_flags: ['Flags', 'Zero-Flag: Wird gesetzt, wenn das Ergebnis nur aus 0 besteht. Carry-Flag: Wird bei add/mul als Übertragsbit für 256 verwendet, bei Subtraktion als Borrow-Bit gesetzt. Parity-Flag: Wird bei einer geraden Anzahl von 1 gesetzt.'],
@@ -49,19 +51,19 @@ function logicalReducer(state = initialState, action) {
           action: bitgroupOperation(state, action)
         }
     case SHOW_INFO:
-      state.activeOperation = 'info';
+      state.activeHelp = 'info';
       return {
         ...state,
           action: state
         }
     case SHOW_FLAGS:
-        state.activeOperation = 'info_flags';
+        state.activeHelp = 'info_flags';
         return {
           ...state,
             action: state
           }
     case SHOW_DECINFO:
-        state.activeOperation = 'info_dec';
+        state.activeHelp = 'info_dec';
         return {
           ...state,
             action: state

@@ -6,7 +6,7 @@ import { showInfo }           from '../../actions/logicalActions'
 
 class LogInfo extends React.Component {
   render() {
-    let op = this.props.activeOperation,
+    let op = this.props.activeHelp,
         topic = this.props.info[op][0],
         descr = this.props.info[op][1];
 
