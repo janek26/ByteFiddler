@@ -39,14 +39,14 @@ class BitSwitch extends React.Component {
           }
           .topic {
             margin-left: 5px;
-            margin-right: 36px;
+            margin-right: 42px;
             padding: 5px 0;
             font-size: 18px;
             font-weight: bold;
           }
           .buttons {
             margin: 0 8px;
-            padding: 5px 9px;
+            padding: 5px 8px;
             background-color: #f1f1f1;
             background-image: linear-gradient(#fdfdfd,#797979);
             border: 1px solid #929292;
@@ -70,7 +70,7 @@ class BitSwitch extends React.Component {
 
         <div className="bitGroupActions">
           <div className="topic">{this.props.topic}</div>
-          <div className={`buttons ${activeOperation==='not'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[0]}>!</div>
+          <div className={`buttons ${activeOperation==='not'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[0]}>~</div>
           <div className={`buttons ${activeOperation==='inc'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[1]}>inc</div>
           <div className={`buttons ${activeOperation==='dec'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[2]}>dec</div>
           <div className={`buttons ${activeOperation==='shl'&&activeGroup==group ? 'on' : 'off'}`}  onClick={operations[3]}>&lt;&lt; shift</div>
