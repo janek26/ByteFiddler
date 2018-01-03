@@ -21,7 +21,7 @@ class IndexPage extends Component {
 
   render () {
     const { toggleBit, bitDisplay } = this.props
-
+	
     var hrefLink = process.env.NODE_ENV === 'production' ? 'logicalPage.html' : '/logicalPage';
 
 
@@ -108,9 +108,10 @@ class IndexPage extends Component {
 
           <div className="lampe">
           <Lampe
-              red={255 - Math.floor(bitGroupSum([bitDisplay.main[0], bitDisplay.main[1], bitDisplay.main[2]]) /7*255)}
-              green={255 - Math.floor(bitGroupSum([bitDisplay.main[3], bitDisplay.main[4], bitDisplay.main[5]]) /7*255)}
-              blue={255 - Math.floor(bitGroupSum([bitDisplay.main[6], bitDisplay.main[7]]) /3*255)}
+              red={bitGroupSum([bitDisplay.main[2], bitDisplay.main[3]]) *85}
+              green={bitGroupSum([bitDisplay.main[4], bitDisplay.main[5]]) *85}
+              blue={bitGroupSum([bitDisplay.main[6], bitDisplay.main[7]]) *85}
+              transparency={bitGroupSum([bitDisplay.main[0], bitDisplay.main[1]]) /3}
             />
           </div>
 
