@@ -7,6 +7,11 @@ export default function div(state) {
       decResult = 0,
       binResult = 0;
 
+  if (bits1 == 0) {
+    alert("Division durch 0 nicht möglich!");
+    return state;
+  }
+  
   decResult = binResult = (bits0 - (bits0 % bits1)) / bits1;
 
   if ((bits0 % bits1) > 0) {
